@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://bppexefdrikcx"]
+
+[ext_resource type="Script" uid="uid://b8atdngukoblb" path="res://scripts/map_level.gd" id="1_06n14"]
+[ext_resource type="Texture2D" uid="uid://x0kinhanxmae" path="res://assets/sprites/test_potion.png" id="1_i3kdw"]
+[ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_test.gd" id="3_y6y1a"]
+[ext_resource type="Texture2D" uid="uid://5cdkbdm02guo" path="res://assets/sprites/test_cauldron.png" id="4_y6y1a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y6y1a"]
+radius = 90.24175
+
+[node name="MapLevel" type="Node2D"]
+script = ExtResource("1_06n14")
+
+[node name="Potion_1" type="Sprite2D" parent="."]
+position = Vector2(230, 213)
+scale = Vector2(0.12774998, 0.1375001)
+texture = ExtResource("1_i3kdw")
+script = ExtResource("3_y6y1a")
+
+[node name="Area2D" type="Area2D" parent="Potion_1"]
+position = Vector2(-444.22705, -1101.8184)
+scale = Vector2(7.82779, 7.272722)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Potion_1/Area2D"]
+position = Vector2(-978, -451)
+polygon = PackedVector2Array(1033, 495, 1068, 501, 1071, 523, 1088, 543, 1070, 564, 1107, 632, 1099, 683, 1031, 704, 975, 683, 962, 623, 988, 564, 976, 534, 994, 522, 997, 499)
+
+[node name="Potion_2" type="Sprite2D" parent="."]
+position = Vector2(458, 220)
+scale = Vector2(0.12774998, 0.1375001)
+texture = ExtResource("1_i3kdw")
+script = ExtResource("3_y6y1a")
+
+[node name="Area2D" type="Area2D" parent="Potion_2"]
+position = Vector2(-444.22705, -1101.8184)
+scale = Vector2(7.82779, 7.272722)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Potion_2/Area2D"]
+position = Vector2(-978, -451)
+polygon = PackedVector2Array(1033, 495, 1068, 501, 1071, 523, 1088, 543, 1070, 564, 1107, 632, 1099, 683, 1031, 704, 975, 683, 962, 623, 988, 564, 976, 534, 994, 522, 997, 499)
+
+[node name="Potion_3" type="Sprite2D" parent="."]
+position = Vector2(709, 228)
+scale = Vector2(0.12774998, 0.1375001)
+texture = ExtResource("1_i3kdw")
+script = ExtResource("3_y6y1a")
+
+[node name="Area2D" type="Area2D" parent="Potion_3"]
+position = Vector2(-444.22705, -1101.8184)
+scale = Vector2(7.82779, 7.272722)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Potion_3/Area2D"]
+position = Vector2(-978, -451)
+polygon = PackedVector2Array(1033, 495, 1068, 501, 1071, 523, 1088, 543, 1070, 564, 1107, 632, 1099, 683, 1031, 704, 975, 683, 962, 623, 988, 564, 976, 534, 994, 522, 997, 499)
+
+[node name="Cauldron" type="Sprite2D" parent="."]
+position = Vector2(291, 787.00006)
+scale = Vector2(1.2340823, 1.2431192)
+texture = ExtResource("4_y6y1a")
+
+[node name="CauldronArea" type="Area2D" parent="Cauldron"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron/CauldronArea"]
+position = Vector2(-4.8619123, -16.088612)
+shape = SubResource("CircleShape2D_y6y1a")
+
+[connection signal="input_event" from="Potion_1/Area2D" to="Potion_1" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Potion_2/Area2D" to="Potion_2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Potion_3/Area2D" to="Potion_3" method="_on_area_2d_input_event"]
