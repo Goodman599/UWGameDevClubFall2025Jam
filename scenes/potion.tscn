@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctqf3c4rtm5uj"]
+
+[ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_test.gd" id="1_le10y"]
+[ext_resource type="Texture2D" uid="uid://x0kinhanxmae" path="res://assets/sprites/test_potion.png" id="2_itmmj"]
+
+[node name="Potion" type="Node2D"]
+script = ExtResource("1_le10y")
+
+[node name="PotionSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.12774998, 0.1375001)
+texture = ExtResource("2_itmmj")
+
+[node name="PotionHitbox" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PotionHitbox"]
+polygon = PackedVector2Array(-2, -105, 33, -99, 36, -77, 53, -57, 35, -36, 72, 32, 64, 83, -4, 104, -60, 83, -73, 23, -47, -36, -59, -66, -41, -78, -38, -101)
+
+[connection signal="input_event" from="PotionHitbox" to="." method="_on_potion_hitbox_input_event"]
