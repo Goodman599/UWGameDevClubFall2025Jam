@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dda3dvapxb25n"]
+
+[ext_resource type="Script" uid="uid://cy5hhvuu11f84" path="res://level_1.gd" id="1_bswci"]
+[ext_resource type="PackedScene" uid="uid://c02j1lg5oclmp" path="res://scenes/level_tile_map.tscn" id="2_rus8k"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_bswci")
+resources = [2, 1, 0, 0, 0]
+
+[node name="LevelTileMap" parent="." instance=ExtResource("2_rus8k")]

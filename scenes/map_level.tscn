@@ -21,11 +21,14 @@ texture = ExtResource("4_y6y1a")
 position = Vector2(-4.8619123, -16.088612)
 shape = SubResource("CircleShape2D_y6y1a")
 
-[node name="Potion1" parent="." instance=ExtResource("3_06n14")]
+[node name="P_Speed" parent="." instance=ExtResource("3_06n14")]
 position = Vector2(172, 220)
 
-[node name="Potion2" parent="." instance=ExtResource("3_06n14")]
-position = Vector2(426, 200)
+[node name="P_Stop" parent="." instance=ExtResource("3_06n14")]
+position = Vector2(423, 217)
 
-[node name="Potion3" parent="." instance=ExtResource("3_06n14")]
-position = Vector2(666, 180)
+[node name="P_Reverse" parent="." instance=ExtResource("3_06n14")]
+position = Vector2(689, 220)
+
+[node name="P_Destroy" parent="." instance=ExtResource("3_06n14")]
+position = Vector2(1378, 440)

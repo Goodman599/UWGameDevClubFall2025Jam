@@ -2,14 +2,17 @@ extends Node2D
 
 var selected = false
 var mouse_offset = Vector2(0,0)
+var crafting_costs = {
+	1:[1, 0, 0, 0, 0],
+	2:[0, 1, 0, 0, 0],
+	3:[0, 0, 1, 0, 0],
+	4:[0, 0, 0, 1, 0],
+}
+
+@export var id = -1
 
 @onready var starting_position = global_position
 @onready var area = $PotionHitbox
-
-var crafting_cost = {
-	"a":1,
-	"b":2
-}
 
 func _process(delta):
 	if selected:
