@@ -11,6 +11,7 @@ scale = Vector2(0.12774998, 0.1375001)
 texture = ExtResource("2_itmmj")
 
 [node name="PotionHitbox" type="Area2D" parent="."]
+position = Vector2(0, 2)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PotionHitbox"]
 polygon = PackedVector2Array(-2, -105, 33, -99, 36, -77, 53, -57, 35, -36, 72, 32, 64, 83, -4, 104, -60, 83, -73, 23, -47, -36, -59, -66, -41, -78, -38, -101)

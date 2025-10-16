@@ -3,6 +3,8 @@ extends Node2D
 var selected = false
 var mouse_offset = Vector2(0,0)
 
+@export var id = 0
+
 @onready var starting_position = global_position
 @onready var area = $PotionHitbox
 
