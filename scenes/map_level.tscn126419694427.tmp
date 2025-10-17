@@ -10,7 +10,7 @@ radius = 90.24175
 
 [node name="MapLevel" type="Node2D"]
 script = ExtResource("1_06n14")
-resources = [5, 3, 1, 0, 0]
+resources = [5, 5, 5, 5, 5]
 
 [node name="Cauldron" type="Sprite2D" parent="."]
 position = Vector2(291, 787.00006)
