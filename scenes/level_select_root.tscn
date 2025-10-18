@@ -1,40 +1,3 @@
-[gd_scene load_steps=3 format=4 uid="uid://bcjww0gb1tad4"]
-
-[ext_resource type="Script" uid="uid://d3q40351wc0cw" path="res://scripts/level_logic.gd" id="1_egqi8"]
-[ext_resource type="PackedScene" path="res://scenes/level_fundamentals.tscn" id="2_0x71t"]
-
-[node name="Level_1" type="Node2D"]
-script = ExtResource("1_egqi8")
-resources = Array[int]([1, 1, 1, 1, 1])
-
-[node name="LevelFundamentals" parent="." instance=ExtResource("2_0x71t")]
-
-[node name="LevelTileMap" parent="LevelFundamentals" index="0"]
-tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAAAAAAAAAgAAQAAAAAAAAAAAAkAAQAAAAAAAAAJAAAAAQAAAAAAAAAIAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAADAAAAAQAAAAAAAAACAAAAAQAAAAAAAAABAAAAAQAAAAAAAAACAAEAAAAEAAAAAAACAAIAAAAEAAQAAAACAAMAAAAEAAQAAAABAAUAAQAAAAAAAAACAAUAAQAAAAAAAAAKAAAAAQAAAAAAAAAKAAEAAQAAAAAAAAAKAAIAAQAAAAAAAAAKAAMAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAAAAAAKAAYAAQAAAAAAAAAKAAcAAQAAAAAAAAAKAAgAAQAAAAAAAAAKAAkAAQAAAAAAAAAKAAoAAQAAAAAAAAAJAAoAAQAAAAAAAAAIAAoAAQAAAAAAAAAHAAoAAQAAAAAAAAAGAAoAAQAAAAAAAAAFAAoAAQAAAAAAAAAEAAoAAQAAAAAAAAADAAoAAQAAAAAAAAACAAoAAQAAAAAAAAABAAoAAQAAAAAAAAAAAAoAAQAAAAAAAAAIAAUAAQAAAAAAAAAJAAUAAQAAAAAAAAAIAAcAAQAAAAAAAAAIAAgAAQAAAAAAAAAIAAkAAQAAAAAAAAAGAAkAAAAEAAgAAAAGAAgAAAAEAAQAAAAGAAcAAAAEAAQAAAAGAAYAAAAEAAQAAAAGAAUAAAAEAAQAAAAGAAQAAAAQAAQAAAAGAAMAAAAIAAQAAAAGAAIAAAAIAAQAAAAHAAMAAQAAAAAAAAAIAAMAAQAAAAAAAAAIAAIAAQAAAAAAAAAHAAIAAQAAAAAAAAAEAAEAAQAAAAAAAAAEAAIAAQAAAAAAAAAEAAMAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAAAAAAEAAYAAQAAAAAAAAAEAAcAAQAAAAAAAAAEAAgAAQAAAAAAAAADAAgAAQAAAAAAAAACAAgAAAAIAAQAAAACAAcAAAAIAAQAAAADAAcAAQAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAQAAAABAAMAAAAAAAQAAAABAAQAAAAAAAgAAAACAAQAAAAEAAgAAAADAAQAAAAEABAAAAADAAMAAAAIAAQAAAADAAIAAAAIAAQAAAADAAEAAAAIAAAAAAADAAUAAAAMAAQAAAADAAYAAAAYABgAAAACAAYAAAAIABAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAQAAAABAAgAAAAAAAQAAAABAAkAAAAAAAgAAAACAAkAAAAIABQAAAADAAkAAAAEAAwAAAAEAAkAAAAEAAwAAAAFAAkAAAAMABQAAAAFAAgAAAAAAAQAAAAFAAcAAAAAAAQAAAAFAAYAAAAAAAQAAAAFAAUAAAAAAAQAAAAFAAQAAAAAAAQAAAAFAAMAAAAAAAQAAAAFAAIAAAAAAAQAAAAFAAEAAAAAAAAAAAAGAAEAAAAIABAAAAAHAAEAAAAEAAwAAAAIAAEAAAAEAAwAAAAJAAEAAAAYABAAAAAJAAIAAAAMAAQAAAAJAAMAAAAMAAQAAAAJAAQAAAAYABgAAAAIAAQAAAAEAAwAAAAHAAQAAAAIABAAAAAHAAUAAAAIAAQAAAAHAAYAAAAYAAgAAAAHAAcAAAAIAAQAAAAHAAgAAAAIAAQAAAAHAAkAAAAIAAgAAAAJAAkAAAAMAAgAAAAJAAgAAAAMAAQAAAAJAAcAAAAMAAQAAAAJAAYAAAAYABAAAAAIAAYAAAAEAAwAAAA=")
-
-[node name="Player" parent="LevelFundamentals" index="1"]
-position = Vector2(96, 96)
-
-[node name="Spirit" parent="LevelFundamentals" index="2"]
-position = Vector2(608, 608)
-
-[editable path="LevelFundamentals"]
-
-[node name="Sidebar" parent="." instance=ExtResource("1_egqi8")]
-
-[node name="LevelSelectSubviewport" type="SubViewportContainer" parent="."]
-layout_mode = 0
-offset_left = 448.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="SubViewport" type="SubViewport" parent="LevelSelectSubviewport"]
-handle_input_locally = false
-size = Vector2i(1472, 1080)
-render_target_update_mode = 4
-
-[node name="Background" type="ColorRect" parent="LevelSelectSubviewport/SubViewport"]
-
 [gd_scene load_steps=4 format=3 uid="uid://bcjww0gb1tad4"]
 
 [ext_resource type="Script" uid="uid://capik4auadpdr" path="res://scripts/level_select_root.gd" id="1_0x71t"]
@@ -52,9 +15,20 @@ mouse_filter = 2
 script = ExtResource("1_0x71t")
 level_subviewport = NodePath("LevelSubviewport")
 
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 1
+[node name="Sidebar" parent="." instance=ExtResource("1_egqi8")]
 
+[node name="LevelSelectSubviewport" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SubViewport" type="SubViewport" parent="LevelSelectSubviewport"]
+handle_input_locally = false
+size = Vector2i(1472, 1080)
+render_target_update_mode = 4
+
+[node name="Background" type="ColorRect" parent="LevelSelectSubviewport/SubViewport"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -86,15 +60,3 @@ visible = false
 layout_mode = 0
 offset_left = 448.0
 offset_right = 1920.0
-
-[node name="Sidebar" parent="." instance=ExtResource("1_egqi8")]
-
-[node name="LevelSubviewport" parent="." instance=ExtResource("2_0x71t")]
-layout_mode = 0
-offset_left = 448.0
-offset_right = 1920.0
-
-[node name="Control" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
