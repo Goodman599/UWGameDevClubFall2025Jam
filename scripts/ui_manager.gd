@@ -7,7 +7,7 @@ const SCREEN_POSITIONS = {
 	"start" : Vector2(0, 0),
 	"level_select" : Vector2(1920, 0),
 }
-const SCREEN_TRANSITION_TIME = 1
+const SCREEN_TRANSITION_TIME = 0.5
 const SCREEN_SIZE = Vector2(1920, 1080)
 
 
