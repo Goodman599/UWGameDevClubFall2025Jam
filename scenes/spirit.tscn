@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddyg8g4cag1pv"]
+
+[ext_resource type="Script" uid="uid://bowk77o4bbk6s" path="res://scripts/spirit.gd" id="1_sb4hy"]
+[ext_resource type="Texture2D" uid="uid://nhgw5uhsc4g3" path="res://assets/sprites/player_art.png" id="2_7i7iv"]
+
+[node name="Spirit" type="Node2D"]
+modulate = Color(1, 0, 0, 1)
+script = ExtResource("1_sb4hy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_7i7iv")
