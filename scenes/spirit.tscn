@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddyg8g4cag1pv"]
 
-[ext_resource type="Script" uid="uid://bowk77o4bbk6s" path="res://spirit.gd" id="1_sb4hy"]
-[ext_resource type="Texture2D" uid="uid://bjrnwvqxj0yym" path="res://art/player_art.png" id="2_7i7iv"]
+[ext_resource type="Script" uid="uid://bowk77o4bbk6s" path="res://scripts/spirit.gd" id="1_sb4hy"]
+[ext_resource type="Texture2D" uid="uid://nhgw5uhsc4g3" path="res://assets/sprites/player_art.png" id="2_7i7iv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fkl8"]
 size = Vector2(8, 8)

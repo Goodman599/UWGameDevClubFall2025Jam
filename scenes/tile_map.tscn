@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://c5mxgk5383vvt"]
 
-[ext_resource type="Texture2D" uid="uid://bivxd4a11ory0" path="res://art/tiles_atlas.png" id="1_35kre"]
-[ext_resource type="PackedScene" uid="uid://sw6phfpltmn5" path="res://character_body_2d.tscn" id="2_03na7"]
-[ext_resource type="Script" uid="uid://dtktstnuag537" path="res://tile_map.gd" id="2_xftlc"]
-[ext_resource type="PackedScene" uid="uid://ddyg8g4cag1pv" path="res://spirit.tscn" id="3_xftlc"]
+[ext_resource type="Texture2D" uid="uid://bgc60b8d80c22" path="res://assets/sprites/tiles_atlas.png" id="1_35kre"]
+[ext_resource type="PackedScene" uid="uid://sw6phfpltmn5" path="res://scenes/character_body_2d.tscn" id="2_03na7"]
+[ext_resource type="Script" uid="uid://dtktstnuag537" path="res://scripts/tile_map.gd" id="2_xftlc"]
+[ext_resource type="PackedScene" uid="uid://ddyg8g4cag1pv" path="res://scenes/spirit.tscn" id="3_xftlc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_anah5"]
 texture = ExtResource("1_35kre")
