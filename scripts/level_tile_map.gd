@@ -1,3 +1,4 @@
+class_name LevelTileMap
 extends TileMapLayer
 
 
