@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var character: CharacterBody2D
 
-const tile_size: Vector2 = Vector2(16, 16)
+const tile_size: Vector2 = Vector2(64, 64)
 var sprite_node_pos_tween : Tween
 signal movement_finished
 
@@ -11,19 +11,7 @@ func _ready() -> void:
 		character.player_moved.connect(mirror_move)
 
 func mirror_move(player_dir: Vector2):
-	var mirror_dir = -player_dir
-	var can_move = true
-	if mirror_dir == Vector2(0, -1) and $up.is_colliding():
-		can_move = false
-	elif mirror_dir == Vector2(0, 1) and $down.is_colliding():
-		can_move = false
-	elif mirror_dir == Vector2(-1, 0) and $left.is_colliding():
-		can_move = false
-	elif mirror_dir == Vector2(1, 0) and $right.is_colliding():
-		can_move = false
-	
-	if can_move:
-		_move(mirror_dir)
+	_move(-player_dir)
 
 func _move(dir: Vector2):
 	global_position += dir * tile_size
