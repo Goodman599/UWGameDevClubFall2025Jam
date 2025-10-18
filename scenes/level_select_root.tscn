@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cm8hjo3ny8ja" path="res://scenes/sidebar.tscn" id="1_egqi8"]
 [ext_resource type="PackedScene" path="res://scenes/level_subviewport.tscn" id="2_0x71t"]
 
-[node name="LevelSelectRoot" type="Control" node_paths=PackedStringArray("level_subviewport")]
+[node name="LevelSelectRoot" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_0x71t")
-level_subviewport = NodePath("")
 
 [node name="Sidebar" parent="." instance=ExtResource("1_egqi8")]
 
