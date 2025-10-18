@@ -7,9 +7,6 @@ enum CustomDataLayers {
 	IS_DESTRUCTABLE,
 }
 
-func _ready():
-	destroy(Vector2i(1, 1))
-
 # Important in built functions:
 #	local_to_map() & map_to_local() converts local coordinates to/from cell coordinates
 

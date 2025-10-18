@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://c02j1lg5oclmp"]
+[gd_scene load_steps=9 format=3 uid="uid://c02j1lg5oclmp"]
 
 [ext_resource type="Texture2D" uid="uid://88icp045uwla" path="res://assets/sprites/auto_tile_template.png" id="1_ymr1n"]
 [ext_resource type="Texture2D" uid="uid://bypibain0h1dr" path="res://assets/sprites/Bricks.png" id="2_qstga"]
@@ -460,6 +460,5 @@ sources/1 = SubResource("TileSetAtlasSource_alnwi")
 sources/2 = SubResource("TileSetAtlasSource_bt6u8")
 
 [node name="LevelTileMap" type="TileMapLayer"]
-tile_map_data = PackedByteArray("AAACAAAAAAAYABAAAAABAAAAAAAEAAwAAAAAAAAAAAAQABAAAAAAAAEAAAAMAAQAAAAAAAIAAAAQABgAAAABAAEAAgAAAAAAAAABAAIAAAAEAAwAAAACAAIAAAAYABgAAAACAAEAAAAMAAQAAAA=")
 tile_set = SubResource("TileSet_kilb6")
 script = ExtResource("2_r1xyn")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctqf3c4rtm5uj"]
 
-[ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_test.gd" id="1_le10y"]
+[ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_le10y"]
 [ext_resource type="Texture2D" uid="uid://x0kinhanxmae" path="res://assets/sprites/test_potion.png" id="2_itmmj"]
 
 [node name="Potion" type="Node2D"]
