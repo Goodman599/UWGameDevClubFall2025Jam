@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddyg8g4cag1pv"]
+
+[ext_resource type="Script" uid="uid://bowk77o4bbk6s" path="res://spirit.gd" id="1_sb4hy"]
+[ext_resource type="Texture2D" uid="uid://bjrnwvqxj0yym" path="res://art/player_art.png" id="2_7i7iv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fkl8"]
+size = Vector2(8, 8)
+
+[node name="Spirit" type="CharacterBody2D"]
+position = Vector2(-80, -80)
+script = ExtResource("1_sb4hy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_7i7iv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2fkl8")
+
+[node name="up" type="RayCast2D" parent="."]
+position = Vector2(0, 8)
+target_position = Vector2(0, 8)
+
+[node name="down" type="RayCast2D" parent="."]
+position = Vector2(0, -8)
+target_position = Vector2(0, -8)
+
+[node name="left" type="RayCast2D" parent="."]
+position = Vector2(8, 0)
+target_position = Vector2(8, 0)
+
+[node name="right" type="RayCast2D" parent="."]
+position = Vector2(-8, 0)
+target_position = Vector2(-8, 0)
