@@ -1,7 +1,5 @@
 extends Node2D
 
-@export var resource_id = -1
-
 func _ready() -> void:
 	updateResourceCounts()
 
