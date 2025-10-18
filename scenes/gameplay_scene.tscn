@@ -5,6 +5,5 @@
 
 [node name="MapLevel" type="Node2D"]
 script = ExtResource("1_b2a1o")
-resources = Array[int]([5, 3, 1, 0, 0])
 
 [node name="Sidebar" parent="." instance=ExtResource("2_xpbwm")]

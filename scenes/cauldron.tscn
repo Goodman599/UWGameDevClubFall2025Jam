@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://dfaoesn2evsk"]
+
+[ext_resource type="Script" uid="uid://dc40guehdcuv6" path="res://scripts/cauldron.gd" id="1_5yblu"]
+[ext_resource type="Texture2D" uid="uid://35ys8462uj3j" path="res://assets/sprites/cauldron/cauldron_back.png" id="1_re3ld"]
+[ext_resource type="Texture2D" uid="uid://buxywtjq4260g" path="res://assets/sprites/LittleGuy/fetus_stage_0.png" id="2_au12p"]
+[ext_resource type="Texture2D" uid="uid://qpq4k2j10lpd" path="res://assets/sprites/bubbles/0.png" id="3_re3ld"]
+[ext_resource type="Texture2D" uid="uid://b5hyr5c7xm7ef" path="res://assets/sprites/bubbles/1.png" id="4_o7j16"]
+[ext_resource type="Texture2D" uid="uid://cvsg2wh5pg5mk" path="res://assets/sprites/bubbles/2.png" id="5_5yblu"]
+[ext_resource type="Texture2D" uid="uid://mqjv2e7jlcms" path="res://assets/sprites/cauldron/cauldron_front.png" id="6_re3ld"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xgj33"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_re3ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o7j16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5yblu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_re3ld"]
+radius = 115.87558
+
+[node name="Cauldron" type="Node2D"]
+script = ExtResource("1_5yblu")
+
+[node name="CauldronBack" type="Sprite2D" parent="."]
+position = Vector2(196.5, 290)
+scale = Vector2(0.26822433, 0.2631579)
+texture = ExtResource("1_re3ld")
+region_enabled = true
+region_rect = Rect2(1960.7039, 1291.7611, 1070.509, 570.62366)
+
+[node name="LittleGuy" type="Sprite2D" parent="."]
+position = Vector2(201, 217.00003)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_au12p")
+region_enabled = true
+region_rect = Rect2(2175.5278, 964.69025, 626.5884, 630.3858)
+
+[node name="Bubbles" type="AnimatedSprite2D" parent="."]
+position = Vector2(127, 352)
+sprite_frames = SubResource("SpriteFrames_xgj33")
+frame_progress = 0.51493967
+
+[node name="CauldronFront" type="Sprite2D" parent="."]
+position = Vector2(198.00002, 239)
+scale = Vector2(0.2656542, 0.27050722)
+texture = ExtResource("6_re3ld")
+region_enabled = true
+region_rect = Rect2(1754.2312, 504.16794, 1492.4192, 1769.6372)
+
+[node name="CauldronHitbox" type="Area2D" parent="."]
+position = Vector2(222.00002, 810.00006)
+scale = Vector2(1.2340823, 1.2431192)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CauldronHitbox"]
+position = Vector2(-21.068298, -480.24365)
+shape = SubResource("CircleShape2D_re3ld")

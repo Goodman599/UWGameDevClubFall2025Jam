@@ -56,7 +56,7 @@ func canCraft() -> bool:
 	if level_node == null:
 		print("No level selected!")
 		return false
-		
+	print(level_node.name)
 	var remainingResources = level_node.resources
 	for i in len(remainingResources):
 		if remainingResources[i] < crafting_costs.get(id)[i]:
@@ -64,6 +64,6 @@ func canCraft() -> bool:
 			return false
 	for i in len(remainingResources):
 		remainingResources[i] -= crafting_costs.get(id)[i]
-		var counter = level_node.get_node("ResourceCounter")
+		var counter = level_node.get_node("ResourceCount")
 		counter.updateResourceCounts()
 	return true

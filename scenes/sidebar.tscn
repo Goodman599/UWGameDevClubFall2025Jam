@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm8hjo3ny8ja"]
+[gd_scene load_steps=4 format=3 uid="uid://cm8hjo3ny8ja"]
 
 [ext_resource type="Texture2D" uid="uid://bypibain0h1dr" path="res://assets/sprites/Bricks.png" id="1_26ftg"]
-[ext_resource type="Texture2D" uid="uid://5cdkbdm02guo" path="res://assets/sprites/test_cauldron.png" id="1_iqt6p"]
+[ext_resource type="PackedScene" uid="uid://dfaoesn2evsk" path="res://scenes/cauldron.tscn" id="3_26ftg"]
 [ext_resource type="PackedScene" uid="uid://ctqf3c4rtm5uj" path="res://scenes/potion.tscn" id="3_nexdq"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_rx5q4"]
-radius = 85.28819
 
 [node name="Sidebar" type="Node2D"]
 
@@ -13,21 +10,6 @@ radius = 85.28819
 position = Vector2(224, 544)
 scale = Vector2(6.9999995, 16.874998)
 texture = ExtResource("1_26ftg")
-
-[node name="Cauldron" type="Node2D" parent="."]
-
-[node name="CauldronSprite" type="Sprite2D" parent="Cauldron"]
-position = Vector2(224.00002, 779.25)
-scale = Vector2(1.198502, 1.2431192)
-texture = ExtResource("1_iqt6p")
-
-[node name="CauldronHitbox" type="Area2D" parent="Cauldron"]
-position = Vector2(228.75, 779.25)
-scale = Vector2(1.2340823, 1.2431192)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldron/CauldronHitbox"]
-position = Vector2(-4.8619123, -16.088612)
-shape = SubResource("CircleShape2D_rx5q4")
 
 [node name="Potions" type="Node2D" parent="."]
 position = Vector2(72, 344)
@@ -52,3 +34,6 @@ id = 3
 [node name="Potion5" parent="Potions" instance=ExtResource("3_nexdq")]
 position = Vector2(291.75793, -261.04657)
 id = 4
+
+[node name="Cauldron" parent="." instance=ExtResource("3_26ftg")]
+position = Vector2(31, 587)
