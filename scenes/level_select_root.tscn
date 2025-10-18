@@ -7,7 +7,6 @@
 script = ExtResource("1_egqi8")
 resources = Array[int]([1, 1, 1, 1, 1])
 
-<<<<<<< Updated upstream
 [node name="LevelFundamentals" parent="." instance=ExtResource("2_0x71t")]
 
 [node name="LevelTileMap" parent="LevelFundamentals" index="0"]
@@ -20,7 +19,7 @@ position = Vector2(96, 96)
 position = Vector2(608, 608)
 
 [editable path="LevelFundamentals"]
-=======
+
 [node name="Sidebar" parent="." instance=ExtResource("1_egqi8")]
 
 [node name="LevelSelectSubviewport" type="SubViewportContainer" parent="."]
@@ -35,6 +34,27 @@ size = Vector2i(1472, 1080)
 render_target_update_mode = 4
 
 [node name="Background" type="ColorRect" parent="LevelSelectSubviewport/SubViewport"]
+
+[gd_scene load_steps=4 format=3 uid="uid://bcjww0gb1tad4"]
+
+[ext_resource type="Script" uid="uid://capik4auadpdr" path="res://scripts/level_select_root.gd" id="1_0x71t"]
+[ext_resource type="PackedScene" uid="uid://x0ce3jivvtyq" path="res://scenes/sidebar.tscn" id="1_egqi8"]
+[ext_resource type="PackedScene" uid="uid://n1v5n42cx1qq" path="res://scenes/level_subviewport.tscn" id="2_0x71t"]
+
+[node name="LevelSelectRoot" type="Control" node_paths=PackedStringArray("level_subviewport")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_0x71t")
+level_subviewport = NodePath("LevelSubviewport")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -66,4 +86,15 @@ visible = false
 layout_mode = 0
 offset_left = 448.0
 offset_right = 1920.0
->>>>>>> Stashed changes
+
+[node name="Sidebar" parent="." instance=ExtResource("1_egqi8")]
+
+[node name="LevelSubviewport" parent="." instance=ExtResource("2_0x71t")]
+layout_mode = 0
+offset_left = 448.0
+offset_right = 1920.0
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

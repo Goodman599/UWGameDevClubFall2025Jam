@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://n1v5n42cx1qq"]
+
+[ext_resource type="Script" uid="uid://dj21516gh5s0a" path="res://scripts/level_subviewport.gd" id="1_u5chb"]
+
+[node name="LevelSubviewport" type="SubViewportContainer"]
+offset_right = 1472.0
+offset_bottom = 1080.0
+script = ExtResource("1_u5chb")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+handle_input_locally = false
+size = Vector2i(1472, 1080)
+render_target_update_mode = 4

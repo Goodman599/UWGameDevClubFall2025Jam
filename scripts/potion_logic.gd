@@ -4,6 +4,14 @@ var selected = false
 var mouse_offset = Vector2(0,0)
 var level_node : Node2D
 
+'''
+# gets the level_node from the ancestral family tree
+func _ready() -> void:
+	var gameplay_scene_node = get_parent().get_parent().get_parent()
+	print(gameplay_scene_node.name)
+	level_node = gameplay_scene_node.get_child(gameplay_scene_node.get_child_count() - 1)
+'''
+
 var crafting_costs = {
 	0 : [1, 0, 0, 0, 0],
 	1 : [0, 1, 0, 0, 0],
@@ -48,7 +56,7 @@ func canCraft() -> bool:
 	if level_node == null:
 		print("No level selected!")
 		return false
-	
+		
 	var remainingResources = level_node.resources
 	for i in len(remainingResources):
 		if remainingResources[i] < crafting_costs.get(id)[i]:
@@ -56,6 +64,6 @@ func canCraft() -> bool:
 			return false
 	for i in len(remainingResources):
 		remainingResources[i] -= crafting_costs.get(id)[i]
-		var counter = level_node.get_node("ResourceCount")
+		var counter = level_node.get_node("ResourceCounter")
 		counter.updateResourceCounts()
 	return true

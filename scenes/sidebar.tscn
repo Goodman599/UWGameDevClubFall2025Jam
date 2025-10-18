@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://x0ce3jivvtyq"]
+[gd_scene load_steps=5 format=3 uid="uid://cm8hjo3ny8ja"]
 
 [ext_resource type="Texture2D" uid="uid://bypibain0h1dr" path="res://assets/sprites/Bricks.png" id="1_26ftg"]
 [ext_resource type="Texture2D" uid="uid://5cdkbdm02guo" path="res://assets/sprites/test_cauldron.png" id="1_iqt6p"]
@@ -10,8 +10,8 @@ radius = 85.28819
 [node name="Sidebar" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(223.99998, 540)
-scale = Vector2(6.9999995, 16.875)
+position = Vector2(224, 544)
+scale = Vector2(6.9999995, 16.874998)
 texture = ExtResource("1_26ftg")
 
 [node name="Cauldron" type="Node2D" parent="."]
