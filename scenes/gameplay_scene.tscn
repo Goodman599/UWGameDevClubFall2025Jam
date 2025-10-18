@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7bkpiesw5uee"]
+
+[ext_resource type="Script" path="res://scripts/level_logic.gd" id="1_b2a1o"]
+[ext_resource type="PackedScene" uid="uid://cm8hjo3ny8ja" path="res://scenes/sidebar.tscn" id="2_xpbwm"]
+
+[node name="MapLevel" type="Node2D"]
+script = ExtResource("1_b2a1o")
+resources = Array[int]([5, 3, 1, 0, 0])
+
+[node name="Sidebar" parent="." instance=ExtResource("2_xpbwm")]
