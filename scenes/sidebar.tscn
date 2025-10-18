@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://x0ce3jivvtyq"]
+[gd_scene load_steps=5 format=3 uid="uid://cm8hjo3ny8ja"]
 
 [ext_resource type="Texture2D" uid="uid://bypibain0h1dr" path="res://assets/sprites/Bricks.png" id="1_26ftg"]
 [ext_resource type="Texture2D" uid="uid://5cdkbdm02guo" path="res://assets/sprites/test_cauldron.png" id="1_iqt6p"]
