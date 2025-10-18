@@ -1,6 +1,6 @@
 extends TileMap
 
-@export var character: CharacterBody2D
+@export var player: CharacterBody2D
 @export var spirit: CharacterBody2D
 
 func _ready():

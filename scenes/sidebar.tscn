@@ -10,8 +10,8 @@ radius = 85.28819
 [node name="Sidebar" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(224, 544)
-scale = Vector2(6.9999995, 16.874998)
+position = Vector2(223.99998, 540)
+scale = Vector2(6.9999995, 16.875)
 texture = ExtResource("1_26ftg")
 
 [node name="Cauldron" type="Node2D" parent="."]

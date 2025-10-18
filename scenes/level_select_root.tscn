@@ -15,8 +15,20 @@ mouse_filter = 2
 script = ExtResource("1_0x71t")
 level_subviewport = NodePath("LevelSubviewport")
 
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 1
+[node name="Sidebar" parent="." instance=ExtResource("1_egqi8")]
+
+[node name="LevelSelectSubviewport" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SubViewport" type="SubViewport" parent="LevelSelectSubviewport"]
+handle_input_locally = false
+size = Vector2i(1472, 1080)
+render_target_update_mode = 4
+
+[node name="Background" type="ColorRect" parent="LevelSelectSubviewport/SubViewport"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -25,14 +37,26 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.9528925, 0.7057349, 0.60952127, 1)
 
-[node name="Sidebar" parent="." instance=ExtResource("1_egqi8")]
-
-[node name="LevelSubviewport" parent="." instance=ExtResource("2_0x71t")]
-layout_mode = 0
-offset_left = 448.0
-offset_right = 1920.0
-
-[node name="Control" type="Control" parent="."]
+[node name="LevelButtons" type="Control" parent="LevelSelectSubviewport/SubViewport"]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="LevelSelectSubviewport/SubViewport/LevelButtons"]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 280.0
+offset_right = 674.0
+offset_bottom = 311.0
+text = "1"
+
+[node name="LevelSelectCamera" type="Camera2D" parent="LevelSelectSubviewport/SubViewport"]
+position = Vector2(734, 541)
+zoom = Vector2(1.3, 1)
+
+[node name="LevelSubviewport" parent="." instance=ExtResource("2_0x71t")]
+visible = false
+layout_mode = 0
+offset_left = 448.0
+offset_right = 1920.0

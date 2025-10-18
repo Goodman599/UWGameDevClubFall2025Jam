@@ -22,4 +22,4 @@ offset_left = 1920.0
 offset_right = 1920.0
 
 [node name="UICamera" type="Camera2D" parent="."]
-position = Vector2(960, 540)
+position = Vector2(960, 544)
