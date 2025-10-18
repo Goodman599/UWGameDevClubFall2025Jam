@@ -35,7 +35,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 89
-text = "Labyrinth of Souls"
+text = "GAME NAME HERE"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 

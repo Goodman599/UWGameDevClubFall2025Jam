@@ -16,11 +16,10 @@ script = ExtResource("1_reske")
 [node name="MainMenuRoot" parent="." instance=ExtResource("1_iku3t")]
 layout_mode = 1
 
-[node name="LevelSelectRoot" parent="." node_paths=PackedStringArray("level_subviewport") instance=ExtResource("2_reske")]
+[node name="LevelSelectRoot" parent="." instance=ExtResource("2_reske")]
 layout_mode = 1
 offset_left = 1920.0
 offset_right = 1920.0
-level_subviewport = NodePath("LevelSubviewport")
 
 [node name="UICamera" type="Camera2D" parent="."]
 position = Vector2(960, 544)
