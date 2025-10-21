@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm8hjo3ny8ja"]
+[gd_scene load_steps=7 format=3 uid="uid://cm8hjo3ny8ja"]
 
 [ext_resource type="Texture2D" uid="uid://bypibain0h1dr" path="res://assets/sprites/Bricks.png" id="1_26ftg"]
+[ext_resource type="PackedScene" uid="uid://d1wj4fmn1oyuc" path="res://scenes/potion_destroy.tscn" id="2_l54f8"]
 [ext_resource type="PackedScene" uid="uid://dfaoesn2evsk" path="res://scenes/cauldron.tscn" id="3_26ftg"]
-[ext_resource type="PackedScene" uid="uid://ctqf3c4rtm5uj" path="res://scenes/potion.tscn" id="3_nexdq"]
+[ext_resource type="PackedScene" uid="uid://cpxki1linsv70" path="res://scenes/potion_freeze.tscn" id="3_s0ffo"]
+[ext_resource type="PackedScene" uid="uid://dbso0v7pc2id4" path="res://scenes/potion_mirror.tscn" id="4_hdh5q"]
+[ext_resource type="PackedScene" uid="uid://dpsrjmk6ns502" path="res://scenes/potion_speed.tscn" id="5_lueqk"]
 
 [node name="Sidebar" type="Node2D"]
 
@@ -15,24 +18,20 @@ texture = ExtResource("1_26ftg")
 position = Vector2(72, 344)
 scale = Vector2(0.5209798, 0.5209798)
 
-[node name="Potion" parent="Potions" instance=ExtResource("3_nexdq")]
-position = Vector2(-30.711363, 0)
-id = 0
-
-[node name="Potion2" parent="Potions" instance=ExtResource("3_nexdq")]
-position = Vector2(199.62386, 0)
+[node name="PotionDestroy" parent="Potions" instance=ExtResource("2_l54f8")]
+position = Vector2(86.37571, -257.20767)
 id = 1
 
-[node name="Potion3" parent="Potions" instance=ExtResource("3_nexdq")]
-position = Vector2(399.2477, 0)
+[node name="PotionFreeze" parent="Potions" instance=ExtResource("3_s0ffo")]
+position = Vector2(489.46234, -234.17415)
 id = 2
 
-[node name="Potion4" parent="Potions" instance=ExtResource("3_nexdq")]
-position = Vector2(614.22723, 0)
+[node name="PotionMirror" parent="Potions" instance=ExtResource("4_hdh5q")]
+position = Vector2(72.93948, 126.68437)
 id = 3
 
-[node name="Potion5" parent="Potions" instance=ExtResource("3_nexdq")]
-position = Vector2(291.75793, -261.04657)
+[node name="PotionSpeed" parent="Potions" instance=ExtResource("5_lueqk")]
+position = Vector2(470.26773, 143.9595)
 id = 4
 
 [node name="Cauldron" parent="." instance=ExtResource("3_26ftg")]

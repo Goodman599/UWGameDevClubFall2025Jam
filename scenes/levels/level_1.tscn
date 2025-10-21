@@ -5,7 +5,7 @@
 [node name="Level1" type="Node2D"]
 
 [node name="LevelFundamentals" parent="." instance=ExtResource("2_6iamk")]
-resources = Array[int]([0, 1, 2, 3, 4])
+resources = Array[int]([1, 0, 2, 0, 4])
 
 [node name="Background" parent="LevelFundamentals" index="0"]
 offset_left = -320.0

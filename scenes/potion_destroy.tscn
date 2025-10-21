@@ -1,20 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctqf3c4rtm5uj"]
+[gd_scene load_steps=5 format=3 uid="uid://d1wj4fmn1oyuc"]
 
-[ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_le10y"]
-[ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_3mc24"]
-[ext_resource type="Texture2D" uid="uid://x0kinhanxmae" path="res://assets/sprites/test_potion.png" id="2_itmmj"]
+[ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_hqu02"]
+[ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_mwjdu"]
+[ext_resource type="Texture2D" uid="uid://x0kinhanxmae" path="res://assets/sprites/test_potion.png" id="3_jkrhq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8kk5y"]
-shader = ExtResource("2_3mc24")
+shader = ExtResource("2_mwjdu")
 shader_parameter/active = false
 
 [node name="Potion" type="Node2D"]
-script = ExtResource("1_le10y")
+script = ExtResource("1_hqu02")
 
 [node name="PotionSprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_8kk5y")
 scale = Vector2(0.12774998, 0.1375001)
-texture = ExtResource("2_itmmj")
+texture = ExtResource("3_jkrhq")
 
 [node name="PotionHitbox" type="Area2D" parent="."]
 
