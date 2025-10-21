@@ -24,7 +24,6 @@ position = Vector2(1088, 832)
 
 [node name="LevelCamera" parent="LevelFundamentals" index="5"]
 position = Vector2(576, 448)
-zoom = Vector2(1.2, 1.2)
 
 [editable path="LevelFundamentals"]
 [editable path="LevelFundamentals/LevelTileMap"]
