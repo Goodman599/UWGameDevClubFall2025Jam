@@ -7,3 +7,4 @@
 [node name="LevelFundamentals" parent="." instance=ExtResource("1_2k7im")]
 
 [editable path="LevelFundamentals"]
+[editable path="LevelFundamentals/LevelTileMap"]
