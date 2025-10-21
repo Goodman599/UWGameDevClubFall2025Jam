@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwa6qnfg6lebp"]
+[gd_scene load_steps=2 format=4 uid="uid://cwa6qnfg6lebp"]
 
 [ext_resource type="PackedScene" uid="uid://vo2ewak6nrrb" path="res://scenes/level_fundamentals.tscn" id="1_aq65u"]
 
@@ -6,4 +6,14 @@
 
 [node name="LevelFundamentals" parent="." instance=ExtResource("1_aq65u")]
 
+[node name="LevelTileMap" parent="LevelFundamentals" index="1"]
+tile_map_data = PackedByteArray("AAABAAAAAAADAAAAAAABAAEAAAAFAAUAAAABAAIAAAADAAIAAAADAAEAAAABAAMAAAACAAEAAAABAAMAAAAAAAEAAAAAAAMAAAAEAAEAAAAGAAQAAAAEAAIAAAADAAEAAAAEAAMAAAAEAAYAAAAFAAMAAAACAAMAAAA=")
+
+[node name="Destructables" parent="LevelFundamentals/LevelTileMap" index="0"]
+tile_map_data = PackedByteArray("AAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAA=")
+
+[node name="Player" parent="LevelFundamentals" index="2"]
+position = Vector2(320, 320)
+
 [editable path="LevelFundamentals"]
+[editable path="LevelFundamentals/LevelTileMap"]
