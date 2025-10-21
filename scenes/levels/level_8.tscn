@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwa6qnfg6lebp"]
+[gd_scene load_steps=2 format=4 uid="uid://cwa6qnfg6lebp"]
 
 [ext_resource type="PackedScene" uid="uid://vo2ewak6nrrb" path="res://scenes/level_fundamentals.tscn" id="1_aq65u"]
 
@@ -22,3 +22,4 @@ position = Vector2(832, -448)
 position = Vector2(576, -64)
 
 [editable path="LevelFundamentals"]
+[editable path="LevelFundamentals/LevelTileMap"]
