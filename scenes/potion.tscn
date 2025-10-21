@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctqf3c4rtm5uj"]
+[gd_scene load_steps=6 format=3 uid="uid://ctqf3c4rtm5uj"]
 
 [ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_le10y"]
 [ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_3mc24"]
@@ -7,6 +7,9 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8kk5y"]
 shader = ExtResource("2_3mc24")
 shader_parameter/active = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itmmj"]
+size = Vector2(20, 27.399998)
 
 [node name="Potion" type="Node2D"]
 script = ExtResource("1_le10y")
@@ -18,7 +21,9 @@ texture = ExtResource("2_itmmj")
 
 [node name="PotionHitbox" type="Area2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PotionHitbox"]
-polygon = PackedVector2Array(-2, -105, 33, -99, 36, -77, 53, -57, 35, -36, 72, 32, 64, 83, -4, 104, -60, 83, -73, 23, -47, -36, -59, -66, -41, -78, -38, -101)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PotionHitbox"]
+position = Vector2(0, 2.9999924)
+scale = Vector2(13, 13)
+shape = SubResource("RectangleShape2D_itmmj")
 
 [connection signal="input_event" from="PotionHitbox" to="." method="_on_potion_hitbox_input_event"]
