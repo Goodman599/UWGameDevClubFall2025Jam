@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://duwply7axl3oa"
+path="res://.godot/imported/pentagramSideLineBitmask.png-228fc0e376687d93af476e4aa3878d9c.res"
+
+[deps]
+
+source_file="res://assets/sprites/pentagram/pentagramSideLineBitmask.png"
+dest_files=["res://.godot/imported/pentagramSideLineBitmask.png-228fc0e376687d93af476e4aa3878d9c.res"]
+
+[params]
+
+create_from=1
+threshold=0.5
