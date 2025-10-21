@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcjww0gb1tad4"]
+[gd_scene load_steps=10 format=3 uid="uid://bcjww0gb1tad4"]
 
 [ext_resource type="Script" uid="uid://capik4auadpdr" path="res://scripts/level_select_root.gd" id="1_0x71t"]
 [ext_resource type="PackedScene" uid="uid://cm8hjo3ny8ja" path="res://scenes/sidebar.tscn" id="1_egqi8"]
-[ext_resource type="PackedScene" path="res://scenes/level_subviewport.tscn" id="2_0x71t"]
+[ext_resource type="PackedScene" uid="uid://b3oqn2p873lkj" path="res://scenes/level_subviewport.tscn" id="2_0x71t"]
+[ext_resource type="Texture2D" uid="uid://bay6ebg8a3auy" path="res://assets/sprites/table.png" id="3_rfw4t"]
 [ext_resource type="Texture2D" uid="uid://bx4j82prb0qn7" path="res://assets/sprites/pentagram/pentagramStarLineGrey.png" id="3_vwcdg"]
 [ext_resource type="BitMap" uid="uid://d3flqfgy6gcu" path="res://assets/sprites/pentagram/pentagramStarLineBitmask.png" id="4_b21aj"]
 [ext_resource type="Script" uid="uid://d3m28mfawhqny" path="res://scripts/level_button.gd" id="5_r1oqa"]
@@ -33,14 +34,16 @@ handle_input_locally = false
 size = Vector2i(1472, 1080)
 render_target_update_mode = 4
 
-[node name="Background" type="ColorRect" parent="LevelSelectSubviewport/SubViewport"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.9528925, 0.7057349, 0.60952127, 1)
+[node name="BackgroundLayer" type="CanvasLayer" parent="LevelSelectSubviewport/SubViewport"]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="LevelSelectSubviewport/SubViewport/BackgroundLayer"]
+offset_left = -1336.0
+offset_top = -1328.0
+offset_right = 3952.0
+offset_bottom = 2136.0
+texture = ExtResource("3_rfw4t")
+stretch_mode = 1
 
 [node name="LevelButtons" type="Control" parent="LevelSelectSubviewport/SubViewport"]
 layout_mode = 3

@@ -29,8 +29,8 @@ func _process(_delta):
 func level_chosen(level_number : int):
 	# If there is already a level loaded, unload it
 	var current_level = load("res://scenes/levels/level_" + str(level_number) + ".tscn").instantiate()
-	if $LevelSubviewport/SubViewport.get_child_count() > 0:
-		var prior_loaded_level = $LevelSubviewport/SubViewport.get_child(0)
+	if $LevelSubviewport/SubViewport.get_child_count() > 1:
+		var prior_loaded_level = $LevelSubviewport/SubViewport.get_child(1)
 		if prior_loaded_level != current_level:
 			$LevelSubviewport/SubViewport.remove_child(prior_loaded_level)
 	
@@ -52,7 +52,7 @@ func zoom_in(target_position : Vector2):
 	screen_tween.tween_property($LevelSelectSubviewport/SubViewport/LevelSelectCamera, "zoom", Vector2(2, 2), 1)
 	screen_tween.set_ease(Tween.EASE_IN_OUT)
 	screen_tween.set_trans(Tween.TRANS_QUAD)
-	screen_tween.parallel().tween_property($LevelSelectSubviewport/SubViewport/LevelSelectCamera, "global_position", target_position, 1)
+	screen_tween.parallel().tween_property($LevelSelectSubviewport/SubViewport/LevelSelectCamera, "global_position", target_position, 0.75)
 	
 
 func zoom_out_on_won():
@@ -64,9 +64,11 @@ func zoom_out_on_won():
 		max_completed_level += 1
 		$LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).show()
 	level_subviewport.disappear()
+	# Subviewport/subviewport.level_X/level_fundamentals/LevelCamera
+	$LevelSubviewport/SubViewport.get_child(1).get_node("LevelFundamentals/LevelCamera").zoom_out()
 	
 	var screen_tween = get_tree().root.create_tween()
 	screen_tween.tween_property($LevelSelectSubviewport/SubViewport/LevelSelectCamera, "zoom", Vector2(1.3, 1), 1)
 	screen_tween.set_ease(Tween.EASE_IN_OUT)
 	screen_tween.set_trans(Tween.TRANS_QUAD)
-	screen_tween.parallel().tween_property($LevelSelectSubviewport/SubViewport/LevelSelectCamera, "global_position", Vector2(724, 541), 1)
+	screen_tween.parallel().tween_property($LevelSelectSubviewport/SubViewport/LevelSelectCamera, "global_position", Vector2(724, 541), 0.75)
