@@ -4,6 +4,8 @@ extends Control
 @onready var potion_parent_node : Node2D = $Sidebar/Potions
 @onready var level_buttons: Control = $LevelSelectSubviewport/SubViewport/LevelButtons
 
+signal level_started(level_number : int)
+
 var current_level_number : int
 var max_completed_level = 0
 
@@ -34,6 +36,7 @@ func level_chosen(level_number : int):
 	# Gets the "LevelFundamentals" node
 	for potion_node in potion_parent_node.get_children():
 		potion_node.level_node = current_level.get_child(0)
+		potion_node.start_level()
 
 
 func zoom_in(target_position : Vector2):

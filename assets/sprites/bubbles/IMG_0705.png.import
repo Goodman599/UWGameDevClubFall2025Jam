@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buxywtjq4260g"
-path="res://.godot/imported/fetus_stage_0.png-fc97254b544697c400689f558d43495f.ctex"
+uid="uid://ci6aebclm7spq"
+path="res://.godot/imported/IMG_0705.png-30e29e27f8685826479e137ed6adcc12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/LittleGuy/fetus_stage_0.png"
-dest_files=["res://.godot/imported/fetus_stage_0.png-fc97254b544697c400689f558d43495f.ctex"]
+source_file="res://assets/sprites/bubbles/IMG_0705.png"
+dest_files=["res://.godot/imported/IMG_0705.png-30e29e27f8685826479e137ed6adcc12.ctex"]
 
 [params]
 

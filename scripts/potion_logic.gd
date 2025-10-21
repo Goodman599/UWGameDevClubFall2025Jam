@@ -35,6 +35,10 @@ func _ready() -> void:
 	if (id == 4):
 		$PotionSprite.texture = speed_texture
 
+func start_level():
+	updateShader()
+	selected = false
+
 func _process(delta):
 	if selected and canCraft():
 		followMouse()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvsg2wh5pg5mk"
-path="res://.godot/imported/2.png-abd3e36aaf3e95b9bd382efb246d779b.ctex"
+uid="uid://bjfetsdpqg4qq"
+path="res://.godot/imported/stage_3.png-d6e30dd8ee57074e4d81e5695c84667e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bubbles/2.png"
-dest_files=["res://.godot/imported/2.png-abd3e36aaf3e95b9bd382efb246d779b.ctex"]
+source_file="res://assets/sprites/LittleGuy/stage_3.png"
+dest_files=["res://.godot/imported/stage_3.png-d6e30dd8ee57074e4d81e5695c84667e.ctex"]
 
 [params]
 

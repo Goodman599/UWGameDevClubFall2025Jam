@@ -1,28 +1,40 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfaoesn2evsk"]
+[gd_scene load_steps=13 format=3 uid="uid://dfaoesn2evsk"]
 
 [ext_resource type="Script" uid="uid://dc40guehdcuv6" path="res://scripts/cauldron.gd" id="1_5yblu"]
 [ext_resource type="Texture2D" uid="uid://35ys8462uj3j" path="res://assets/sprites/cauldron/cauldron_back.png" id="1_re3ld"]
-[ext_resource type="Texture2D" uid="uid://buxywtjq4260g" path="res://assets/sprites/LittleGuy/fetus_stage_0.png" id="2_au12p"]
-[ext_resource type="Texture2D" uid="uid://qpq4k2j10lpd" path="res://assets/sprites/bubbles/0.png" id="3_re3ld"]
-[ext_resource type="Texture2D" uid="uid://b5hyr5c7xm7ef" path="res://assets/sprites/bubbles/1.png" id="4_o7j16"]
-[ext_resource type="Texture2D" uid="uid://cvsg2wh5pg5mk" path="res://assets/sprites/bubbles/2.png" id="5_5yblu"]
+[ext_resource type="Texture2D" uid="uid://c8651rjdkvss6" path="res://assets/sprites/LittleGuy/stage_5.png" id="3_chtgr"]
+[ext_resource type="Texture2D" uid="uid://c4nir1m66mcn7" path="res://assets/sprites/bubbles/IMG_0699.png" id="4_chtgr"]
+[ext_resource type="Texture2D" uid="uid://48lghmlqb3hr" path="res://assets/sprites/bubbles/IMG_0700.png" id="5_i4pxq"]
+[ext_resource type="Texture2D" uid="uid://ctmaukbwqfy8b" path="res://assets/sprites/bubbles/IMG_0701.png" id="6_axias"]
 [ext_resource type="Texture2D" uid="uid://mqjv2e7jlcms" path="res://assets/sprites/cauldron/cauldron_front.png" id="6_re3ld"]
+[ext_resource type="Texture2D" uid="uid://iipmounn8q5e" path="res://assets/sprites/bubbles/IMG_0703.png" id="7_ow17b"]
+[ext_resource type="Texture2D" uid="uid://c3l6i3rertakd" path="res://assets/sprites/bubbles/IMG_0704.png" id="8_ugs4q"]
+[ext_resource type="Texture2D" uid="uid://ci6aebclm7spq" path="res://assets/sprites/bubbles/IMG_0705.png" id="9_bkh15"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xgj33"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_re3ld")
+"texture": ExtResource("4_chtgr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_o7j16")
+"texture": ExtResource("5_i4pxq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_5yblu")
+"texture": ExtResource("6_axias")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ow17b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ugs4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_bkh15")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_re3ld"]
@@ -41,12 +53,12 @@ region_rect = Rect2(1960.7039, 1291.7611, 1070.509, 570.62366)
 [node name="LittleGuy" type="Sprite2D" parent="."]
 position = Vector2(201, 217.00003)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_au12p")
-region_enabled = true
+texture = ExtResource("3_chtgr")
 region_rect = Rect2(2175.5278, 964.69025, 626.5884, 630.3858)
 
 [node name="Bubbles" type="AnimatedSprite2D" parent="."]
-position = Vector2(127, 352)
+position = Vector2(195, 219)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_xgj33")
 frame_progress = 0.51493967
 
