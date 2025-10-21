@@ -1,89 +1,81 @@
-[gd_scene load_steps=7 format=3 uid="uid://bedatp2u2jbrl"]
+[gd_scene load_steps=6 format=3 uid="uid://bedatp2u2jbrl"]
 
 [ext_resource type="Script" uid="uid://cuinnqf08com7" path="res://scripts/resource_count.gd" id="1_ev123"]
 [ext_resource type="Texture2D" uid="uid://8v3bg7x1yv8o" path="res://assets/sprites/fire.png" id="2_sdvgy"]
 [ext_resource type="Texture2D" uid="uid://bero3igs78jat" path="res://assets/sprites/water.png" id="3_lvtci"]
 [ext_resource type="Texture2D" uid="uid://nj6kcqnak3d2" path="res://assets/sprites/poop.png" id="4_3ki1r"]
 [ext_resource type="Texture2D" uid="uid://dacbklbt3cbb1" path="res://assets/sprites/eggplant.png" id="5_pfxrl"]
-[ext_resource type="Texture2D" uid="uid://dqpmbr7u8sv3h" path="res://assets/sprites/peach.png" id="6_scmf7"]
 
 [node name="ResourceCounter" type="CanvasLayer"]
 script = ExtResource("1_ev123")
 
-[node name="Control" type="Control" parent="."]
+[node name="Labels" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 740.0
+offset_bottom = 664.0
 
-[node name="count_0" type="Label" parent="Control"]
+[node name="count_0" type="Label" parent="Labels"]
 layout_mode = 0
-offset_left = 79.00001
-offset_top = 22.0
-offset_right = 96.96451
-offset_bottom = 46.938416
-scale = Vector2(2.449275, 1.8846427)
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 30
 text = "-1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="count_1" type="Label" parent="Control"]
+[node name="count_1" type="Label" parent="Labels"]
 layout_mode = 0
-offset_left = 214.00002
-offset_top = 22.0
-offset_right = 231.96451
-offset_bottom = 46.938416
-scale = Vector2(2.449275, 1.8846427)
+offset_left = 192.0
+offset_right = 256.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 30
 text = "-1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="count_2" type="Label" parent="Control"]
+[node name="count_2" type="Label" parent="Labels"]
 layout_mode = 0
-offset_left = 341.0
-offset_top = 19.0
-offset_right = 358.96448
-offset_bottom = 43.938416
-scale = Vector2(2.449275, 1.8846427)
+offset_left = 320.0
+offset_right = 384.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 30
 text = "-1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="count_3" type="Label" parent="Control"]
+[node name="count_3" type="Label" parent="Labels"]
 layout_mode = 0
-offset_left = 479.00003
-offset_top = 17.0
-offset_right = 496.9645
-offset_bottom = 41.93841
-scale = Vector2(2.449275, 1.8846427)
+offset_left = 448.0
+offset_right = 512.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 30
 text = "-1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="count_4" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 635.00006
-offset_top = 17.0
-offset_right = 652.96454
-offset_bottom = 41.938416
-scale = Vector2(2.449275, 1.8846427)
-text = "-1"
+[node name="Sprites" type="Node2D" parent="."]
+position = Vector2(24, 24)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="resource_icon_1" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(42.999996, 42.000008)
+[node name="resource_icon_1" type="Sprite2D" parent="Sprites"]
+position = Vector2(32, 32)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_sdvgy")
 
-[node name="resource_icon_2" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(173.00002, 42)
+[node name="resource_icon_2" type="Sprite2D" parent="Sprites"]
+position = Vector2(160, 32)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_lvtci")
 
-[node name="resource_icon_3" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(307, 43)
+[node name="resource_icon_3" type="Sprite2D" parent="Sprites"]
+position = Vector2(288, 33)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_3ki1r")
 
-[node name="resource_icon_4" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(434, 42)
+[node name="resource_icon_4" type="Sprite2D" parent="Sprites"]
+position = Vector2(415, 32)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_pfxrl")
-
-[node name="resource_icon_5" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(589, 38)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("6_scmf7")
