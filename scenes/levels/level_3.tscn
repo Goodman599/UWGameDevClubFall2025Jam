@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ixw3gva7w6ql"]
+
+[ext_resource type="PackedScene" uid="uid://vo2ewak6nrrb" path="res://scenes/level_fundamentals.tscn" id="1_o8c3j"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="LevelFundamentals" parent="." instance=ExtResource("1_o8c3j")]
+
+[editable path="LevelFundamentals"]

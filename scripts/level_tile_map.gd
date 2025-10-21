@@ -14,6 +14,9 @@ enum CustomDataLayers {
 # Given a tile position, and a property (Can be found using enumerator)
 # Returns the value for the custom data (transformative)
 func get_tile_property(tile_position: Vector2i, data_id : int):
+	if get_cell_tile_data(tile_position) == null:
+		return null
+	
 	return get_cell_tile_data(tile_position).get_custom_data_by_layer_id(data_id)
 
 

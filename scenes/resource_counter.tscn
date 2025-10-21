@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dacbklbt3cbb1" path="res://assets/sprites/eggplant.png" id="5_pfxrl"]
 [ext_resource type="Texture2D" uid="uid://dqpmbr7u8sv3h" path="res://assets/sprites/peach.png" id="6_scmf7"]
 
-[node name="ResourceCounter" type="Node2D"]
+[node name="ResourceCounter" type="CanvasLayer"]
 script = ExtResource("1_ev123")
 
 [node name="Control" type="Control" parent="."]
