@@ -26,7 +26,7 @@ tilemap = NodePath("../LevelTileMap")
 
 [node name="Spirit" parent="." node_paths=PackedStringArray("tilemap") instance=ExtResource("2_ttjgc")]
 position = Vector2(160, 96)
-scale = Vector2(4.5, 4.5)
+scale = Vector2(0.25, 0.25)
 tilemap = NodePath("../LevelTileMap")
 
 [node name="ResourceCount" parent="." instance=ExtResource("4_14hfp")]
