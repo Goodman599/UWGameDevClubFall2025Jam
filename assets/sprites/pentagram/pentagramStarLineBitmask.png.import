@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://d3flqfgy6gcu"
+path="res://.godot/imported/pentagramStarLineBitmask.png-cf63ec42a52736660671fef15b2de59a.res"
+
+[deps]
+
+source_file="res://assets/sprites/pentagram/pentagramStarLineBitmask.png"
+dest_files=["res://.godot/imported/pentagramStarLineBitmask.png-cf63ec42a52736660671fef15b2de59a.res"]
+
+[params]
+
+create_from=1
+threshold=0.5
