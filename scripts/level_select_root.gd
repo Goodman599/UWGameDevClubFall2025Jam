@@ -4,14 +4,20 @@ extends Control
 @onready var potion_parent_node : Node2D = $Sidebar/Potions
 @onready var level_buttons: Control = $LevelSelectSubviewport/SubViewport/LevelButtons
 
+@onready var solidStarLineTexture = preload("res://assets/sprites/pentagram/pentagramsStarLineWhite.png")
+@onready var solidSideLineTexture = preload("res://assets/sprites/pentagram/pentagramsSideLineWhite.png")
+
 var current_level_number : int
 var max_completed_level = 0
 
 func _ready():
 	for i in range(level_buttons.get_child_count()):
-		level_buttons.get_children()[i].pressed.connect(level_chosen.bind(i + 1))
-		if i > max_completed_level:
-			level_buttons.get_children()[i].hide()
+		var button = level_buttons.get_children()[i]
+		if button is TextureButton:
+			@warning_ignore("integer_division")
+			level_buttons.get_children()[i].pressed.connect(level_chosen.bind((i / 2 + 1)))
+			if i > max_completed_level:
+				level_buttons.get_children()[i].hide()
 
 func _process(_delta):
 	if Input.is_action_just_pressed("reset"):
@@ -29,7 +35,7 @@ func level_chosen(level_number : int):
 	current_level.get_node("LevelFundamentals/Player").won.connect(zoom_out_on_won)
 	$LevelSubviewport/SubViewport.add_child(current_level)
 	current_level_number = level_number
-	zoom_in(level_buttons.get_child(level_number - 1).global_position)
+	zoom_in(level_buttons.get_child(level_number * 2 - 1).global_position)
 	# Set the "current_level" in all potions to get resource count
 	# Gets the "LevelFundamentals" node
 	for potion_node in potion_parent_node.get_children():
@@ -48,8 +54,12 @@ func zoom_in(target_position : Vector2):
 
 func zoom_out_on_won():
 	if current_level_number > max_completed_level:
+		if max_completed_level < 5:
+			$LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).texture_normal = solidStarLineTexture
+		else:
+			$LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).texture_normal = solidSideLineTexture
 		max_completed_level += 1
-		$LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level).show()
+		$LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).show()
 	level_subviewport.disappear()
 	
 	var screen_tween = get_tree().root.create_tween()
