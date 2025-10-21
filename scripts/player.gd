@@ -30,16 +30,18 @@ func _process(_delta):
 		return
 	target_tile_position += move_dir
 	
-	# Check if target tile is walkable
-	if ((!movement_tween or !movement_tween.is_running() or !spirit.movement_tween.is_running()) and check_tile_walkability(target_tile_position)):
+	# Check if still in movement animation
+	if ((!movement_tween or !movement_tween.is_running() or !spirit.movement_tween.is_running())):
 		if !can_move:
 			return
-		# Call spirit to check if spirit target tile is walkable
+		# Call spirit to check if spirit target tile is walkable first
 		# Receives a value of 0, 0 if the check fails
 		var spirit_move_dir: Vector2i = spirit.mirror_move(move_dir)
 		if spirit_move_dir != Vector2i(0, 0):
-			move(move_dir)
-			spirit.move(spirit_move_dir)
+			# Check own move
+			if check_tile_walkability(target_tile_position):
+				move(move_dir)
+				spirit.move(spirit_move_dir)
 		
 
 func check_win():

@@ -4,9 +4,10 @@ extends TileMapLayer
 
 enum CustomDataLayers {
 	IS_WALKABLE,
-	IS_WALL,
 	IS_DESTRUCTABLE,
 }
+
+var marked_for_destruction : Vector2i
 
 # Important in built functions:
 #	local_to_map() & map_to_local() converts local coordinates to/from cell coordinates
@@ -17,11 +18,23 @@ func get_tile_property(tile_position: Vector2i, data_id : int):
 	if get_cell_tile_data(tile_position) == null:
 		return null
 	
+	if data_id == CustomDataLayers.IS_DESTRUCTABLE:
+		if $Destructables.get_cell_tile_data(tile_position) == null:
+			return null
+		return $Destructables.get_cell_tile_data(tile_position).get_custom_data("is_destructable")
+	
 	return get_cell_tile_data(tile_position).get_custom_data_by_layer_id(data_id)
 
 
 # Given a tile position, and if it is breakable, turns it into a normal path.
 func destroy(tile_position : Vector2i):
-	if get_cell_tile_data(tile_position).get_custom_data_by_layer_id(CustomDataLayers.IS_DESTRUCTABLE):
-		# Change target tile into a path terrain
-		set_cells_terrain_connect([tile_position], 0, 0)
+	if $Destructables.get_cell_tile_data(tile_position).get_custom_data("is_destructable"):
+		# Change target tile into a broken block
+		$Destructables.set_cell(tile_position, 0, Vector2(1, 0))
+
+func mark_for_destruction(tile : Vector2i):
+	marked_for_destruction = tile
+	
+func destroy_marked_tile():
+	if marked_for_destruction:
+		destroy(marked_for_destruction)
