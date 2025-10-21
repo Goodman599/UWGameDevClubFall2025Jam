@@ -10,4 +10,10 @@ func appear():
 	visible = true
 	var appear_tween = get_tree().root.create_tween()
 	appear_tween.tween_property(self, "modulate", Color(1, 1, 1, 1), 2)
-	await appear_tween.finished
+
+func disappear():
+	visible = true
+	var disappear_tween = get_tree().root.create_tween()
+	disappear_tween.tween_property(self, "modulate", Color(1, 1, 1, 0), 2)
+	await disappear_tween.finished
+	visible = false

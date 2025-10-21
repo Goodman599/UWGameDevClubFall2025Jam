@@ -2,7 +2,13 @@
 
 extends ControllableCharacter
 
+signal won
+
 @export var spirit : Spirit
+
+func _ready():
+	movement_completed.connect(check_win)
+
 
 # This needs to be in the _process() function instead of the _input() function
 # IDK why but it starts dropping inputs randomly otherwise
@@ -25,10 +31,20 @@ func _process(_delta):
 	target_tile_position += move_dir
 	
 	# Check if target tile is walkable
-	if ((!movement_tween or !movement_tween.is_running()) and check_tile_walkability(target_tile_position)):
+	if ((!movement_tween or !movement_tween.is_running() or !spirit.movement_tween.is_running()) and check_tile_walkability(target_tile_position)):
+		if !can_move:
+			return
 		# Call spirit to check if spirit target tile is walkable
 		# Receives a value of 0, 0 if the check fails
 		var spirit_move_dir: Vector2i = spirit.mirror_move(move_dir)
 		if spirit_move_dir != Vector2i(0, 0):
 			move(move_dir)
 			spirit.move(spirit_move_dir)
+		
+
+func check_win():
+	await spirit.movement_tween.finished
+	if global_position == spirit.global_position:
+		can_move = false
+		spirit.can_move = false
+		emit_signal("won")
