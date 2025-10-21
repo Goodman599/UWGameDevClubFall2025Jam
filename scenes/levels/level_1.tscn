@@ -5,23 +5,18 @@
 [node name="Level1" type="Node2D"]
 
 [node name="LevelFundamentals" parent="." instance=ExtResource("2_6iamk")]
+resources = Array[int]([2, 2, 2, 2])
 
-[node name="Background" parent="LevelFundamentals" index="0"]
-offset_left = -752.0
-offset_top = -248.0
-offset_right = 1904.0
-offset_bottom = 1272.0
-
-[node name="LevelTileMap" parent="LevelFundamentals" index="1"]
+[node name="LevelTileMap" parent="LevelFundamentals" index="0"]
 tile_map_data = PackedByteArray("AAAAAAAAAAADAAAAAAAAAAEAAAADAAEAAAAAAAIAAAAEAAYAAAABAAIAAAABAAMAAAACAAIAAAAGAAUAAAACAAEAAAADAAEAAAACAAAAAAAEAAQAAAACAAMAAAADAAEAAAACAAQAAAAFAAUAAAAEAAQAAAAGAAUAAAAEAAMAAAADAAEAAAAEAAIAAAADAAEAAAAEAAAAAAAFAAQAAAAFAAAAAAABAAMAAAAGAAAAAAABAAMAAAAHAAAAAAABAAMAAAAIAAAAAAAGAAQAAAAIAAEAAAADAAEAAAAIAAIAAAAGAAUAAAAGAAIAAAAEAAQAAAAGAAMAAAADAAEAAAAGAAQAAAAEAAUAAAAAAAUAAAADAAEAAAAAAAYAAAAEAAYAAAAEAAUAAAADAAEAAAAEAAYAAAAGAAYAAAAIAAUAAAAGAAUAAAAIAAYAAAAGAAYAAAAAAAQAAAAEAAQAAAABAAQAAAABAAMAAAABAAYAAAABAAMAAAACAAYAAAAFAAYAAAADAAYAAAABAAMAAAAIAAQAAAAGAAUAAAAIAAMAAAADAAEAAAAHAAYAAAAFAAYAAAAHAAUAAAAFAAUAAAAHAAQAAAAFAAQAAAAEAAEAAAADAAEAAAADAAAAAAABAAMAAAAGAAUAAAAEAAUAAAAGAAYAAAAEAAYAAAADAAQAAAABAAMAAAACAAUAAAADAAEAAAAHAAIAAAABAAMAAAA=")
 
-[node name="Player" parent="LevelFundamentals" index="2"]
+[node name="Player" parent="LevelFundamentals" index="1"]
 position = Vector2(64, 64)
 
-[node name="Spirit" parent="LevelFundamentals" index="3"]
+[node name="Spirit" parent="LevelFundamentals" index="2"]
 position = Vector2(1088, 832)
 
-[node name="LevelCamera" parent="LevelFundamentals" index="5"]
+[node name="LevelCamera" parent="LevelFundamentals" index="4"]
 position = Vector2(576, 448)
 
 [editable path="LevelFundamentals"]

@@ -11,10 +11,10 @@ var mirror_texture = preload("res://assets/sprites/potions/potion_mirror.png")
 var speed_texture = preload("res://assets/sprites/potions/potion_speed.png")
 
 var crafting_costs = {
-	1 : [0, 1, 0, 0, 0],
-	2 : [0, 0, 1, 0, 0],
-	3 : [0, 0, 0, 1, 0],
-	4 : [0, 0, 0, 0, 1],
+	1 : [1, 0, 0, 0],
+	2 : [0, 1, 0, 0],
+	3 : [0, 0, 1, 0],
+	4 : [0, 0, 0, 1],
 }
 
 @export var id = -1
@@ -86,11 +86,12 @@ func craft():
 		remainingResources[i] -= crafting_costs.get(id)[i]
 		var counter = level_node.get_node("ResourceCount")
 		counter.updateResourceCounts()
-	print("potion id " + str(id) + " used")
+	var player_node = level_node.get_node("Player")
+	player_node.potion_status = id
+	player_node.potion_duration = 2
 	updateShader()
 		
 func updateShader():
-	print("updating shader for potion id: " + str(id))
 	if canCraft():
 		$PotionSprite.material.set_shader_parameter("active", false)
 	else:
