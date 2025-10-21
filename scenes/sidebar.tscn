@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cm8hjo3ny8ja"]
 
-[ext_resource type="Texture2D" uid="uid://bypibain0h1dr" path="res://assets/sprites/Bricks.png" id="1_26ftg"]
+[ext_resource type="Texture2D" uid="uid://dng3v03wqbmvv" path="res://assets/sprites/shelf.png" id="1_l54f8"]
 [ext_resource type="PackedScene" uid="uid://d1wj4fmn1oyuc" path="res://scenes/potion_destroy.tscn" id="2_l54f8"]
 [ext_resource type="PackedScene" uid="uid://dfaoesn2evsk" path="res://scenes/cauldron.tscn" id="3_26ftg"]
 [ext_resource type="PackedScene" uid="uid://cpxki1linsv70" path="res://scenes/potion_freeze.tscn" id="3_s0ffo"]
@@ -10,28 +10,28 @@
 [node name="Sidebar" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(224, 544)
-scale = Vector2(6.9999995, 16.874998)
-texture = ExtResource("1_26ftg")
+position = Vector2(223.00003, 421.5)
+scale = Vector2(0.20091744, 0.25968748)
+texture = ExtResource("1_l54f8")
 
 [node name="Potions" type="Node2D" parent="."]
 position = Vector2(72, 344)
 scale = Vector2(0.5209798, 0.5209798)
 
 [node name="PotionDestroy" parent="Potions" instance=ExtResource("2_l54f8")]
-position = Vector2(88.295166, -358.93906)
+position = Vector2(176.59032, -358.93915)
 id = 1
 
 [node name="PotionFreeze" parent="Potions" instance=ExtResource("3_s0ffo")]
-position = Vector2(504.81802, -357.0196)
+position = Vector2(504.81805, -385.81152)
 id = 2
 
 [node name="PotionMirror" parent="Potions" instance=ExtResource("4_hdh5q")]
-position = Vector2(88.295166, 117.087074)
+position = Vector2(130.52332, 78.69791)
 id = 3
 
 [node name="PotionSpeed" parent="Potions" instance=ExtResource("5_lueqk")]
-position = Vector2(510.5764, 122.84544)
+position = Vector2(510.57635, 74.85895)
 id = 4
 
 [node name="Cauldron" parent="." instance=ExtResource("3_26ftg")]
