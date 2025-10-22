@@ -52,6 +52,8 @@ func _process(_delta):
 				move(move_dir)
 				spirit.move(spirit_move_dir)
 				count_down()
+			else: # If this could not move
+				tilemap.clear_marked_tile()
 		
 
 func check_win():

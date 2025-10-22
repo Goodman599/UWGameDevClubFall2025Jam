@@ -33,11 +33,9 @@ func check_tile_walkability(tile_position: Vector2i, potion_status : int):
 		if self.name != "Spirit": # I hate checking for name but this is the simplest way
 			return false # Only the spirit can have the potion effect
 		
-		# SIf the spirit can destroy a tile, mark it for destruction			
-		var has_destrcutive_potion_enabled :bool = false
+		# If the spirit can destroy a tile, mark it for destruction	
 		if (potion_status == 1):
 			tilemap.mark_for_destruction(tile_position)
-			has_destrcutive_potion_enabled = true
-		return has_destrcutive_potion_enabled
+		return potion_status == 1
 		
 	return tilemap.get_tile_property(tile_position, tilemap.CustomDataLayers.IS_WALKABLE)

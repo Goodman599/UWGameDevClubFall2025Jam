@@ -30,6 +30,7 @@ func _process(_delta):
 
 
 func level_chosen(level_number : int):
+	
 	if in_transition:
 		return
 	

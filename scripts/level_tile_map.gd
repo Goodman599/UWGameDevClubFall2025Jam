@@ -28,7 +28,7 @@ func get_tile_property(tile_position: Vector2i, data_id : int):
 
 # Given a tile position, and if it is breakable, turns it into a normal path.
 func destroy(tile_position : Vector2i):
-	if $Destructables.get_cell_tile_data(tile_position).get_custom_data("is_destructable"):
+	if $Destructables.get_cell_tile_data(tile_position) != null and $Destructables.get_cell_tile_data(tile_position).get_custom_data("is_destructable"):
 		# Change target tile into a broken block
 		$Destructables.set_cell(tile_position, 0, Vector2(1, 0))
 
@@ -38,3 +38,7 @@ func mark_for_destruction(tile : Vector2i):
 func destroy_marked_tile():
 	if marked_for_destruction:
 		destroy(marked_for_destruction)
+
+func clear_marked_tile():
+	# This is gonna bite us in the ass one day
+	marked_for_destruction = Vector2i(-1000, -1000)

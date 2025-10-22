@@ -10,7 +10,7 @@ func mirror_move(player_dir: Vector2i, potion_status) -> Vector2i:
 	var target_tile_position: Vector2i = tilemap.local_to_map(tilemap.to_local(global_position)) + move_dir
 	if check_tile_walkability(target_tile_position, potion_status) and potion_status != 2:
 		
-		print("target tile position: " + str(target_tile_position))
+		#print("target tile position: " + str(target_tile_position))
 		# reach here if destination tile is walkable
 		if potion_status == 3:
 			# reach here if walking distance is 2
