@@ -24,7 +24,7 @@ func move(int_dir: Vector2i):
 	emit_signal("movement_completed")
 
 
-func check_tile_walkability(tile_position: Vector2i):
+func check_tile_walkability(tile_position: Vector2i, potion_status : int):
 	# Can add additional conditions, such as "target is destructable && has destruction potion effect"
 	if tilemap.get_tile_property(tile_position, tilemap.CustomDataLayers.IS_DESTRUCTABLE):
 		if tile_position == tilemap.marked_for_destruction: # If a spirit has marked this tile as destruction
@@ -33,11 +33,11 @@ func check_tile_walkability(tile_position: Vector2i):
 		if self.name != "Spirit": # I hate checking for name but this is the simplest way
 			return false # Only the spirit can have the potion effect
 		
-		# TODO: Replace this temp variable with a actual condition
-		var has_destrcutive_potion_enabled = true
-		# SIf the spirit can destroy a tile, mark it for destruction
-		if has_destrcutive_potion_enabled:
+		# SIf the spirit can destroy a tile, mark it for destruction			
+		var has_destrcutive_potion_enabled :bool = false
+		if (potion_status == 1):
 			tilemap.mark_for_destruction(tile_position)
+			has_destrcutive_potion_enabled = true
 		return has_destrcutive_potion_enabled
 		
 	return tilemap.get_tile_property(tile_position, tilemap.CustomDataLayers.IS_WALKABLE)

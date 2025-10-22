@@ -44,6 +44,9 @@ func level_chosen(level_number : int):
 	for potion_node in potion_parent_node.get_children():
 		potion_node.level_node = current_level.get_child(0)
 		potion_node.start_level()
+	var player_node = current_level.get_node("LevelFundamentals/Player")
+	player_node.potion_status = 0
+	player_node.potion_duration = 0
 
 
 func zoom_in(target_position : Vector2):

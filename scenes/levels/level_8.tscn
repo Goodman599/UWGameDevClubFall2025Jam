@@ -13,13 +13,13 @@ tile_map_data = PackedByteArray("AAABAAAAAAAGAAQAAAABAAEAAAAFAAUAAAABAAIAAAAEAAY
 [node name="Destructables" parent="LevelFundamentals/LevelTileMap" index="0"]
 tile_map_data = PackedByteArray("AAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAA=")
 
-[node name="Player" parent="LevelFundamentals" index="2"]
-position = Vector2(192.00003, 192.00002)
+[node name="Player" parent="LevelFundamentals" index="1"]
+position = Vector2(192.00002, 192.00002)
 
-[node name="Spirit" parent="LevelFundamentals" index="3"]
-position = Vector2(832, -456)
+[node name="Spirit" parent="LevelFundamentals" index="2"]
+position = Vector2(832, -448)
 
-[node name="LevelCamera" parent="LevelFundamentals" index="5"]
+[node name="LevelCamera" parent="LevelFundamentals" index="4"]
 position = Vector2(576, -64)
 
 [editable path="LevelFundamentals"]

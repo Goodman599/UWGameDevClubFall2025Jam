@@ -6,6 +6,9 @@ signal won
 
 @export var spirit : Spirit
 
+var potion_status = 0    # 1 = destroy, 2 = freeze, 3 = mirror, 4 = speed
+var potion_duration = 0
+
 func _ready():
 	movement_completed.connect(check_win)
 
@@ -34,14 +37,22 @@ func _process(_delta):
 	if ((!movement_tween or !movement_tween.is_running() or !spirit.movement_tween.is_running())):
 		if !can_move:
 			return
+			
+		var spirit_move_dir = move_dir
+		if potion_status == 3:
+			spirit_move_dir = -spirit_move_dir
+		if potion_status == 4:
+			spirit_move_dir *= 2
 		# Call spirit to check if spirit target tile is walkable first
 		# Receives a value of 0, 0 if the check fails
-		var spirit_move_dir: Vector2i = spirit.mirror_move(move_dir)
-		if spirit_move_dir != Vector2i(0, 0):
+		spirit_move_dir = spirit.mirror_move(spirit_move_dir, potion_status)
+		print(spirit_move_dir)
+		if spirit_move_dir != Vector2i(0, 0) or potion_status == 2:
 			# Check own move
-			if check_tile_walkability(target_tile_position):
+			if check_tile_walkability(target_tile_position, potion_status):
 				move(move_dir)
 				spirit.move(spirit_move_dir)
+				count_down()
 		
 
 func check_win():
@@ -50,3 +61,9 @@ func check_win():
 		can_move = false
 		spirit.can_move = false
 		emit_signal("won")
+		
+func count_down():
+	if potion_duration > 0:
+		potion_duration -= 1
+	if potion_duration == 0:
+		potion_status = 0
