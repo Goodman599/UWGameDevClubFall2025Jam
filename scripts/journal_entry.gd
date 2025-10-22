@@ -10,7 +10,6 @@ func _ready() -> void:
 	textures.append(preload("res://assets/sprites/journals/journal_4.png"))
 	
 func _input(event: InputEvent) -> void:
-	z_index = 100
 	if event.is_pressed():
 		if event is InputEventMouseButton or event is InputEventKey:
 			fade_out()

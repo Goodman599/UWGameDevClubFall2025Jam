@@ -39,10 +39,12 @@ func _on_potion_hitbox_input_event(viewport: Node, event: InputEvent, shape_idx:
 	if event is InputEventMouseButton and level_started:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.is_released():
+				z_index = 1
 				selected = false
 				checkCauldronCollision()
 				global_position = starting_position
 			else:
+				z_index = 2
 				mouse_offset = global_position - get_global_mouse_position()
 				selected = true
 		elif event.button_index == MOUSE_BUTTON_RIGHT:
@@ -83,7 +85,7 @@ func craft():
 	updateShader()
 		
 func updateShader():
-	if canCraft():
+	if canCraft() or level_node == null:
 		$PotionSprite.material.set_shader_parameter("active", false)
 	else:
 		$PotionSprite.material.set_shader_parameter("active", true)
