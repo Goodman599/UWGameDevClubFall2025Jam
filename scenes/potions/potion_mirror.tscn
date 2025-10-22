@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbso0v7pc2id4"]
+
+[ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_ym1ep"]
+[ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_oag7s"]
+[ext_resource type="Texture2D" uid="uid://bl8j8yjo4ugdx" path="res://assets/sprites/potions/potion_mirror.png" id="3_ym1ep"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8kk5y"]
+shader = ExtResource("2_oag7s")
+shader_parameter/active = false
+
+[node name="Potion" type="Node2D"]
+script = ExtResource("1_ym1ep")
+id = 3
+
+[node name="PotionSprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_8kk5y")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_ym1ep")
+
+[node name="PotionHitbox" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PotionHitbox"]
+polygon = PackedVector2Array(-64, -152, -64, -208, 80, -208, 80, -160, 112, -128, 112, 192, 0, 208, -96, 184, -96, 24, -144, 0, -136, -96, -96, -96, -96, -136)
+
+[connection signal="input_event" from="PotionHitbox" to="." method="_on_potion_hitbox_input_event"]

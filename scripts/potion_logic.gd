@@ -5,10 +5,6 @@ var mouse_offset = Vector2(0,0)
 var level_node : Node2D
 var level_started = false
 
-var destroy_texture = preload("res://assets/sprites/potions/potion_destroy.png")
-var freeze_texture = preload("res://assets/sprites/potions/potion_freeze.png")
-var mirror_texture = preload("res://assets/sprites/potions/potion_mirror.png")
-var speed_texture = preload("res://assets/sprites/potions/potion_speed.png")
 
 var crafting_costs = {
 	1 : [1, 0, 0, 0],
@@ -24,16 +20,6 @@ var crafting_costs = {
 @onready var starting_position = global_position
 @onready var area = $PotionHitbox
 
-func _ready() -> void:
-	$PotionSprite.scale = Vector2(0.25, 0.25)
-	if (id == 1):
-		$PotionSprite.texture = destroy_texture
-	if (id == 2):
-		$PotionSprite.texture = freeze_texture
-	if (id == 3):
-		$PotionSprite.texture = mirror_texture
-	if (id == 4):
-		$PotionSprite.texture = speed_texture
 
 func start_level():
 	updateShader()

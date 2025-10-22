@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bng8sxfrve15v"]
 
 [ext_resource type="Script" uid="uid://cy5hhvuu11f84" path="res://scripts/level_logic.gd" id="1_06n14"]
-[ext_resource type="PackedScene" uid="uid://ctqf3c4rtm5uj" path="res://scenes/potion.tscn" id="3_06n14"]
-[ext_resource type="PackedScene" uid="uid://bedatp2u2jbrl" path="res://scenes/resource_count.tscn" id="4_jih40"]
+[ext_resource type="PackedScene" uid="uid://ctqf3c4rtm5uj" path="res://scenes/potions/potion.tscn" id="3_06n14"]
+[ext_resource type="PackedScene" uid="uid://bedatp2u2jbrl" path="res://scenes/resource_counter.tscn" id="4_jih40"]
 [ext_resource type="Texture2D" uid="uid://5cdkbdm02guo" path="res://assets/sprites/test_cauldron.png" id="4_y6y1a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y6y1a"]
