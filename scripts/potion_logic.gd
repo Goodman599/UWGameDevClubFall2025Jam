@@ -17,7 +17,7 @@ var crafting_costs = {
 
 @export var id = -1
 # potion IDs:
-# 1 = destroy, 2 = freeze, 3 = mirror, 4 = speed
+# 1 = destroy, 2 = freeze, 3 = speed, 4 = mirror
 
 @onready var starting_position = global_position
 @onready var area = $PotionHitbox
@@ -32,6 +32,7 @@ func _ready() -> void:
 	hovering = false
 	area.mouse_entered.connect(showToolTip)
 	area.mouse_exited.connect(hideToolTip)
+	add_to_group("potions")
 
 func start_level():
 	updateShader()
@@ -48,7 +49,9 @@ func _process(_delta):
 		updateShader()
 		level_started = true
 	if hovering:
-		update_tooltip_position()				
+		update_tooltip_position()			
+	else:
+		hideToolTip()	
 		
 func followMouse():
 	global_position = get_global_mouse_position() + mouse_offset
@@ -102,6 +105,7 @@ func craft():
 	var player_node = level_node.get_node("Player")
 	player_node.potion_status = id
 	player_node.potion_duration = 2
+	get_tree().call_group("potions", "updateShader")
 	updateShader()
 	$use_sound.play()
 		
@@ -118,7 +122,7 @@ func update_tooltip_position():
 
 
 func showToolTip():
-	if level_node == null or canCraft() == false or Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) or Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+	if level_node == null or Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) or Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
 		hideToolTip()
 		return
 	hovering = true

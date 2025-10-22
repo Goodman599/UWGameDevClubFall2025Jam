@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bay6ebg8a3auy" path="res://assets/sprites/table.png" id="3_rfw4t"]
 [ext_resource type="Texture2D" uid="uid://bx4j82prb0qn7" path="res://assets/sprites/pentagram/pentagramStarLineGrey.png" id="3_vwcdg"]
 [ext_resource type="BitMap" uid="uid://d3flqfgy6gcu" path="res://assets/sprites/pentagram/pentagramStarLineBitmask.png" id="4_b21aj"]
-[ext_resource type="Script" path="res://scripts/level_button.gd" id="5_r1oqa"]
+[ext_resource type="Script" uid="uid://d3m28mfawhqny" path="res://scripts/level_button.gd" id="5_r1oqa"]
 [ext_resource type="Texture2D" uid="uid://b2dqoohvtdu3e" path="res://assets/sprites/pentagram/pentagramSideLineGrey.png" id="5_xqwgc"]
 [ext_resource type="BitMap" uid="uid://duwply7axl3oa" path="res://assets/sprites/pentagram/pentagramSideLineBitmask.png" id="6_r1oqa"]
 [ext_resource type="AudioStream" uid="uid://nco7rn407x56" path="res://assets/sounds/level_selected.mp3" id="10_300xu"]
