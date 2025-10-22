@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ddyg8g4cag1pv" path="res://scenes/spirit.tscn" id="2_ttjgc"]
 [ext_resource type="PackedScene" uid="uid://c02j1lg5oclmp" path="res://scenes/level_tile_map.tscn" id="3_14hfp"]
 [ext_resource type="PackedScene" uid="uid://bedatp2u2jbrl" path="res://scenes/resource_counter.tscn" id="4_14hfp"]
-[ext_resource type="Script" path="res://scripts/level_camera.gd" id="6_b163e"]
+[ext_resource type="Script" uid="uid://c8vfdbinhineh" path="res://scripts/level_camera.gd" id="6_b163e"]
 [ext_resource type="PackedScene" uid="uid://dcbvdg1mqvrsx" path="res://scenes/back_button.tscn" id="7_mji1n"]
 
 [node name="LevelFundamentals" type="Node2D"]

@@ -5,12 +5,16 @@ extends ControllableCharacter
 signal won
 
 @export var spirit : Spirit
+var overlay = preload("res://scenes/overlay.tscn").instantiate()
 
 var potion_status = 0    # 1 = destroy, 2 = freeze, 3 = mirror, 4 = speed
 var potion_duration = 0
 
 func _ready():
 	movement_completed.connect(check_win)
+	get_parent().add_child(overlay)
+	overlay.global_position = Vector2(1000,0)
+	overlay.init()
 
 
 # This needs to be in the _process() function instead of the _input() function
@@ -56,6 +60,9 @@ func _process(_delta):
 				tilemap.clear_marked_tile()
 		
 
+func potion_used():
+	updateVignette()
+
 func check_win():
 	await spirit.movement_tween.finished
 	if global_position == spirit.global_position:
@@ -68,3 +75,8 @@ func count_down():
 		potion_duration -= 1
 	if potion_duration == 0:
 		potion_status = 0
+	updateVignette()
+
+func updateVignette():
+	if overlay:
+		overlay.update(potion_status, potion_duration)

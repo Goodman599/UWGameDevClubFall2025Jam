@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://35ys8462uj3j" path="res://assets/sprites/cauldron/cauldron_back.png" id="1_re3ld"]
 [ext_resource type="Texture2D" uid="uid://tp86ctk84xfp" path="res://assets/sprites/LittleGuy/stage_1.png" id="3_chtgr"]
 [ext_resource type="Texture2D" uid="uid://c4nir1m66mcn7" path="res://assets/sprites/bubbles/IMG_0699.png" id="4_chtgr"]
-[ext_resource type="Script" path="res://scripts/little_guy.gd" id="4_i4pxq"]
+[ext_resource type="Script" uid="uid://7m73bhy6wgfx" path="res://scripts/little_guy.gd" id="4_i4pxq"]
 [ext_resource type="Texture2D" uid="uid://48lghmlqb3hr" path="res://assets/sprites/bubbles/IMG_0700.png" id="5_i4pxq"]
 [ext_resource type="Texture2D" uid="uid://ctmaukbwqfy8b" path="res://assets/sprites/bubbles/IMG_0701.png" id="6_axias"]
 [ext_resource type="Texture2D" uid="uid://mqjv2e7jlcms" path="res://assets/sprites/cauldron/cauldron_front.png" id="6_re3ld"]

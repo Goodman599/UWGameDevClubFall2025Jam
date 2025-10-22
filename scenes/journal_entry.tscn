@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b2ckm2d66cqk4"]
 
-[ext_resource type="Script" path="res://scripts/journal_entry.gd" id="1_6db4l"]
+[ext_resource type="Script" uid="uid://dv4fkig0eqbac" path="res://scripts/journal_entry.gd" id="1_6db4l"]
 [ext_resource type="Texture2D" uid="uid://ba3n2oq6w2304" path="res://assets/sprites/journals/journal_1.png" id="2_hpsyo"]
 
 [node name="JournalEntry" type="Node2D"]

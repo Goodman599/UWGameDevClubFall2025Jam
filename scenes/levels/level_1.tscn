@@ -39,7 +39,7 @@ offset_bottom = 232.0
 theme_override_fonts/font = ExtResource("2_nsrm0")
 theme_override_font_sizes/font_size = 30
 text = "Your companion yearns
-to meet with it's shepherd"
+to meet with its shepherd"
 horizontal_alignment = 1
 
 [editable path="LevelFundamentals"]

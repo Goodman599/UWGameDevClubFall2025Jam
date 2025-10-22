@@ -8,7 +8,7 @@ extends Control
 @onready var solidSideLineTexture = preload("res://assets/sprites/pentagram/pentagramsSideLineWhite.png")
 
 var current_level_number : int = -1
-var max_completed_level = 0
+var max_completed_level = 4
 
 var screen_tween : Tween
 
@@ -87,9 +87,9 @@ func zoom_out_on_won():
 		
 		var cauldron_node = get_node("Sidebar/Cauldron")
 		@warning_ignore("integer_division")
-		if cauldron_node.stage != (max_completed_level + 1) / 2 + 1:
+		if cauldron_node.stage != (max_completed_level ) / 2 + 1:
 			@warning_ignore("integer_division")
-			cauldron_node.set_fetus_stage((max_completed_level + 1) / 2 + 1)
+			cauldron_node.set_fetus_stage((max_completed_level ) / 2 + 1)
 	
 	$LevelComplete.play()
 	

@@ -105,6 +105,7 @@ func craft():
 	var player_node = level_node.get_node("Player")
 	player_node.potion_status = id
 	player_node.potion_duration = 2
+	player_node.potion_used()
 	get_tree().call_group("potions", "updateShader")
 	updateShader()
 	$use_sound.play()
