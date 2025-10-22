@@ -37,21 +37,25 @@ position = Vector2(72, 344)
 scale = Vector2(0.5209798, 0.5209798)
 
 [node name="PotionDestroy" parent="Potions" instance=ExtResource("2_l54f8")]
+visible = false
 z_index = 1
 position = Vector2(180.42923, -280.24115)
 scale = Vector2(0.9, 0.9)
 
 [node name="PotionFreeze" parent="Potions" instance=ExtResource("3_s0ffo")]
+visible = false
 z_index = 1
 position = Vector2(429.95917, -309.03333)
 scale = Vector2(0.9, 0.9)
 
 [node name="PotionMirror" parent="Potions" instance=ExtResource("4_hdh5q")]
+visible = false
 z_index = 1
 position = Vector2(153.55682, 126.68442)
 scale = Vector2(0.9, 0.85)
 
 [node name="PotionSpeed" parent="Potions" instance=ExtResource("5_lueqk")]
+visible = false
 z_index = 1
 position = Vector2(456.83154, 124.76489)
 scale = Vector2(1, 0.8)
