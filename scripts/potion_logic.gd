@@ -36,10 +36,9 @@ func _ready() -> void:
 
 func start_level():
 	updateShader()
-	if (max_completed_level + 1) / 2 >= id:
+	if (max_completed_level + 1) / 2 >= id and !visible:
 		show()
-	else:
-		hide()
+		$AppearSound.play()
 	selected = false
 
 func _process(_delta):
@@ -108,7 +107,7 @@ func craft():
 	player_node.potion_used()
 	get_tree().call_group("potions", "updateShader")
 	updateShader()
-	$use_sound.play()
+	$UseSound.play()
 		
 func updateShader():
 	if level_node == null or canCraft():
