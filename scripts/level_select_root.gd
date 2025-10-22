@@ -18,7 +18,8 @@ func _ready():
 		if button is TextureButton:
 			@warning_ignore("integer_division")
 			level_buttons.get_children()[i].pressed.connect(level_chosen.bind((i / 2 + 1)))
-			#if i > max_completed_level:
+			if i > max_completed_level:
+				pass
 				#level_buttons.get_children()[i].hide()
 
 func _process(_delta):
