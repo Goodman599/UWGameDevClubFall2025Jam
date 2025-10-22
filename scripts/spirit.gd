@@ -1,6 +1,10 @@
 # Requires a reference to the LevelTileMap to work
 class_name Spirit
 extends ControllableCharacter
+
+
+var overlay_scene = preload("res://scenes/fading_text.tscn")
+
 # Mirrors and checks the legitimacy of the player move
 # Returns the mirrored move on success
 # Returns 0, 0 on fail
@@ -23,12 +27,10 @@ func mirror_move(player_dir: Vector2i, potion_status) -> Vector2i:
 				return Vector2i(0, 0)
 		else:
 			return move_dir
-	else:
+	elif potion_status != 2:
+		print("test")
 		spawn_overlay()
-		return Vector2i(0, 0)
+	return Vector2i(0, 0)
 
 func spawn_overlay() -> void:
-	var overlay_scene = preload("res://scenes/fading_text.tscn")
-	var overlay_instance = overlay_scene.instantiate()
-	overlay_instance.global_position = global_position + Vector2(1920 + 440, 0)
-	get_tree().current_scene.add_child(overlay_instance)
+	$FadingText.fade_out()

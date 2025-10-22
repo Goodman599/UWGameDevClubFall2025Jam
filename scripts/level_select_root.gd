@@ -8,7 +8,7 @@ extends Control
 @onready var solidSideLineTexture = preload("res://assets/sprites/pentagram/pentagramsSideLineWhite.png")
 
 var current_level_number : int = -1
-var max_completed_level = 4
+var max_completed_level = 0
 
 var screen_tween : Tween
 

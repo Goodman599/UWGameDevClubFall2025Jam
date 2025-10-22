@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr3ro0572a54c"]
+[gd_scene load_steps=3 format=3 uid="uid://bif3dy24csklo"]
 
 [ext_resource type="Texture2D" uid="uid://56qo40kqurje" path="res://assets/sprites/vignette.png" id="1_d607a"]
 [ext_resource type="Script" uid="uid://mffn1olp88cl" path="res://scripts/overlay.gd" id="1_r2eog"]
 
-[node name="Overlay" type="Node2D"]
+[node name="Overlay" type="CanvasLayer"]
 script = ExtResource("1_r2eog")
 
 [node name="Vignette" type="Sprite2D" parent="."]

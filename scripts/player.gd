@@ -5,16 +5,14 @@ extends ControllableCharacter
 signal won
 
 @export var spirit : Spirit
-var overlay = preload("res://scenes/overlay.tscn").instantiate()
+
+@onready var overlay = $"../Overlay"
 
 var potion_status = 0    # 1 = destroy, 2 = freeze, 3 = mirror, 4 = speed
 var potion_duration = 0
 
 func _ready():
 	movement_completed.connect(check_win)
-	get_parent().add_child(overlay)
-	overlay.global_position = Vector2(1000,0)
-	overlay.init()
 
 
 # This needs to be in the _process() function instead of the _input() function
@@ -78,5 +76,4 @@ func count_down():
 	updateVignette()
 
 func updateVignette():
-	if overlay:
-		overlay.update(potion_status, potion_duration)
+	overlay.update(potion_status, potion_duration)

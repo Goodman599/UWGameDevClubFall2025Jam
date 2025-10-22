@@ -7,14 +7,12 @@
 script = ExtResource("1_qbknh")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -89.0
-offset_top = -17.0
-offset_right = 90.0
-offset_bottom = 17.0
+offset_right = 322.0
+offset_bottom = 60.0
 theme_override_colors/font_color = Color(1, 0.2784314, 0.29803923, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_y8ss0")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 200
 text = "Spirit obstructed!"
 horizontal_alignment = 1
 vertical_alignment = 1

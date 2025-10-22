@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://ddyg8g4cag1pv"]
+[gd_scene load_steps=13 format=3 uid="uid://ddyg8g4cag1pv"]
 
 [ext_resource type="Script" uid="uid://bowk77o4bbk6s" path="res://scripts/spirit.gd" id="1_sb4hy"]
 [ext_resource type="Texture2D" uid="uid://j7p6wfwkfm85" path="res://assets/sprites/spirit_sheet.png" id="2_4vn76"]
+[ext_resource type="PackedScene" uid="uid://b3t8xxh4npf7l" path="res://scenes/fading_text.tscn" id="3_fcyu3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fcyu3"]
 atlas = ExtResource("2_4vn76")
@@ -76,3 +77,8 @@ position = Vector2(0, -64)
 sprite_frames = SubResource("SpriteFrames_oa580")
 autoplay = "default"
 frame_progress = 0.5449583
+
+[node name="FadingText" parent="." instance=ExtResource("3_fcyu3")]
+visible = false
+z_index = 5
+position = Vector2(-640, -504)

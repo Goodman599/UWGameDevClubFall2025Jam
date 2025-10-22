@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://vo2ewak6nrrb"]
+[gd_scene load_steps=9 format=3 uid="uid://vo2ewak6nrrb"]
 
 [ext_resource type="Script" uid="uid://bt7q6dnwx64a6" path="res://scripts/level_fundamentals.gd" id="1_b163e"]
 [ext_resource type="PackedScene" uid="uid://dg70gmehvsr02" path="res://scenes/player.tscn" id="1_mx8il"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bedatp2u2jbrl" path="res://scenes/resource_counter.tscn" id="4_14hfp"]
 [ext_resource type="Script" uid="uid://c8vfdbinhineh" path="res://scripts/level_camera.gd" id="6_b163e"]
 [ext_resource type="PackedScene" uid="uid://dcbvdg1mqvrsx" path="res://scenes/back_button.tscn" id="7_mji1n"]
+[ext_resource type="PackedScene" path="res://scenes/overlay.tscn" id="8_ycl1k"]
 
 [node name="LevelFundamentals" type="Node2D"]
 script = ExtResource("1_b163e")
@@ -30,5 +31,7 @@ tilemap = NodePath("../LevelTileMap")
 script = ExtResource("6_b163e")
 
 [node name="BackButton" parent="." instance=ExtResource("7_mji1n")]
+
+[node name="Overlay" parent="." instance=ExtResource("8_ycl1k")]
 
 [editable path="LevelTileMap"]
