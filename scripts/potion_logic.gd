@@ -49,16 +49,21 @@ func _process(delta):
 func followMouse():
 	global_position = get_global_mouse_position() + mouse_offset
 
-
 func _on_potion_hitbox_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and level_started:
-		if event.is_released():
-			selected = false
-			checkCauldronCollision()
-			global_position = starting_position
-		else:
-			mouse_offset = global_position - get_global_mouse_position()
-			selected = true
+	if event is InputEventMouseButton and level_started:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.is_released():
+				selected = false
+				checkCauldronCollision()
+				global_position = starting_position
+			else:
+				mouse_offset = global_position - get_global_mouse_position()
+				selected = true
+		elif event.button_index == MOUSE_BUTTON_RIGHT:
+			var journal_node = $"../../JournalEntry"
+			journal_node.setTexture(id)
+			journal_node.fade_in()
+			
 		
 func checkCauldronCollision():
 	var overlapping = area.get_overlapping_areas()

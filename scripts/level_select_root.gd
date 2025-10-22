@@ -18,8 +18,8 @@ func _ready():
 		if button is TextureButton:
 			@warning_ignore("integer_division")
 			level_buttons.get_children()[i].pressed.connect(level_chosen.bind((i / 2 + 1)))
-			if i > max_completed_level:
-				level_buttons.get_children()[i].hide()
+			#if i > max_completed_level:
+				#level_buttons.get_children()[i].hide()
 
 func _process(_delta):
 	if Input.is_action_just_pressed("reset"):
