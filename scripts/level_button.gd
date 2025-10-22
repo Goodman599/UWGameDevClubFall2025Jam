@@ -16,3 +16,9 @@ func hovered():
 	
 func held():
 	modulate = Color(0.8, 0.8, 0.8)
+
+func appear():
+	show()
+	modulate.a = 0
+	var appear_tween = get_tree().root.create_tween()
+	appear_tween.tween_property(self, "modulate", Color(1, 1, 1, 1), 1)

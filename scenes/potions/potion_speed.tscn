@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpsrjmk6ns502"]
+[gd_scene load_steps=6 format=3 uid="uid://dpsrjmk6ns502"]
 
 [ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_ttxux"]
 [ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_btkd0"]
 [ext_resource type="Texture2D" uid="uid://bn5to5fn6jmqf" path="res://assets/sprites/potions/potion_speed.png" id="3_bocin"]
+[ext_resource type="AudioStream" uid="uid://y42uvunwrksj" path="res://assets/sounds/potion_used.mp3" id="4_kxst0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8kk5y"]
 shader = ExtResource("2_btkd0")
@@ -21,5 +22,8 @@ texture = ExtResource("3_bocin")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PotionHitbox"]
 polygon = PackedVector2Array(13, -223, 16, -189, 34, -185, 32, -170, 24, -169, 32, 208, -6, 218, -42, 211, -48, -169, -57, -170, -58, -184, -43, -190, -46, -222)
+
+[node name="use_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_kxst0")
 
 [connection signal="input_event" from="PotionHitbox" to="." method="_on_potion_hitbox_input_event"]

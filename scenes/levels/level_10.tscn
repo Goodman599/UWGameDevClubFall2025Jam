@@ -1,10 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://dp450vutdp7kw"]
+[gd_scene load_steps=2 format=4 uid="uid://bon5tv4hm1u7l"]
 
-[ext_resource type="PackedScene" uid="uid://vo2ewak6nrrb" path="res://scenes/level_fundamentals.tscn" id="1_2k7im"]
+[ext_resource type="PackedScene" uid="uid://vo2ewak6nrrb" path="res://scenes/level_fundamentals.tscn" id="1_t7yg2"]
 
-[node name="Level10" type="Node2D"]
+[node name="Level9" type="Node2D"]
 
-[node name="LevelFundamentals" parent="." instance=ExtResource("1_2k7im")]
+[node name="LevelFundamentals" parent="." instance=ExtResource("1_t7yg2")]
+resources = Array[int]([0, 0, 1, 2])
+
+[node name="LevelTileMap" parent="LevelFundamentals" index="0"]
+tile_map_data = PackedByteArray("AAAAAAAAAAAEAAQAAAAAAAEAAAADAAEAAAAAAAIAAAAEAAYAAAAAAAQAAAAEAAQAAAAAAAUAAAADAAEAAAAAAAYAAAAEAAYAAAABAAAAAAABAAMAAAABAAIAAAAGAAQAAAABAAMAAAAEAAUAAAABAAQAAAAFAAYAAAABAAYAAAABAAMAAAACAAAAAAABAAMAAAACAAQAAAAGAAUAAAACAAUAAAADAAEAAAACAAYAAAAGAAYAAAADAAAAAAABAAMAAAAEAAAAAAAFAAQAAAAEAAEAAAAEAAUAAAAFAAAAAAAFAAQAAAAFAAEAAAAGAAUAAAAEAAIAAAAEAAUAAAAEAAMAAAAGAAYAAAADAAMAAAABAAMAAAACAAMAAAAFAAQAAAAFAAIAAAAFAAYAAAAHAAAAAAABAAMAAAAHAAIAAAABAAMAAAAHAAQAAAAEAAQAAAAHAAUAAAAEAAUAAAAIAAQAAAAFAAUAAAAIAAUAAAAFAAYAAAAHAAYAAAADAAIAAAAIAAAAAAAGAAQAAAAIAAEAAAADAAEAAAAIAAIAAAAGAAUAAAAIAAMAAAADAAEAAAAJAAQAAAAGAAQAAAAJAAUAAAAGAAUAAAAJAAYAAAADAAIAAAAGAAIAAAABAAMAAAAGAAAAAAABAAMAAAA=")
+
+[node name="Destructables" parent="LevelFundamentals/LevelTileMap" index="0"]
+tile_map_data = PackedByteArray("AAAGAAIAAAAAAAAAAAA=")
+
+[node name="Player" parent="LevelFundamentals" index="1"]
+position = Vector2(192, 832)
+
+[node name="Spirit" parent="LevelFundamentals" index="2"]
+position = Vector2(1088, 704)
+
+[node name="LevelCamera" parent="LevelFundamentals" index="4"]
+position = Vector2(576, 448)
 
 [editable path="LevelFundamentals"]
 [editable path="LevelFundamentals/LevelTileMap"]

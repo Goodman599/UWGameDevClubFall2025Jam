@@ -16,3 +16,4 @@ func _ready() -> void:
 func set_fetus_stage(newStage : int):
 	$LittleGuy.texture = textures[newStage - 1]
 	stage = newStage
+	$BellSound.play()

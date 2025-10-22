@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://yc6e25extyul"]
+[gd_scene load_steps=6 format=3 uid="uid://yc6e25extyul"]
 
 [ext_resource type="PackedScene" uid="uid://bq7i1v4a0xdtn" path="res://scenes/main_menu_root.tscn" id="1_iku3t"]
 [ext_resource type="Script" uid="uid://c0p6em7mbp26p" path="res://scripts/ui_manager.gd" id="1_reske"]
 [ext_resource type="PackedScene" uid="uid://bcjww0gb1tad4" path="res://scenes/level_select_root.tscn" id="2_reske"]
+[ext_resource type="AudioStream" uid="uid://1fren1p7niej" path="res://assets/sounds/music.mp3" id="4_j2mt3"]
+[ext_resource type="AudioStream" uid="uid://cj1vtj814qdwk" path="res://assets/sounds/start_game_transition.mp3" id="5_ixhu3"]
 
 [node name="UIManager" type="Control"]
 layout_mode = 3
@@ -23,3 +25,10 @@ offset_right = 1920.0
 
 [node name="UICamera" type="Camera2D" parent="."]
 position = Vector2(960, 544)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_j2mt3")
+autoplay = true
+
+[node name="Transition" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ixhu3")
