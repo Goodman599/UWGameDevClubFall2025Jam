@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://capik4auadpdr" path="res://scripts/level_select_root.gd" id="1_0x71t"]
 [ext_resource type="PackedScene" uid="uid://cm8hjo3ny8ja" path="res://scenes/sidebar.tscn" id="1_egqi8"]
-[ext_resource type="PackedScene" path="res://scenes/level_subviewport.tscn" id="2_0x71t"]
+[ext_resource type="PackedScene" uid="uid://n1v5n42cx1qq" path="res://scenes/level_subviewport.tscn" id="2_0x71t"]
 [ext_resource type="Texture2D" uid="uid://bay6ebg8a3auy" path="res://assets/sprites/table.png" id="3_rfw4t"]
 [ext_resource type="Texture2D" uid="uid://bx4j82prb0qn7" path="res://assets/sprites/pentagram/pentagramStarLineGrey.png" id="3_vwcdg"]
 [ext_resource type="BitMap" uid="uid://d3flqfgy6gcu" path="res://assets/sprites/pentagram/pentagramStarLineBitmask.png" id="4_b21aj"]
-[ext_resource type="Script" path="res://scripts/level_button.gd" id="5_r1oqa"]
+[ext_resource type="Script" uid="uid://d3m28mfawhqny" path="res://scripts/level_button.gd" id="5_r1oqa"]
 [ext_resource type="Texture2D" uid="uid://b2dqoohvtdu3e" path="res://assets/sprites/pentagram/pentagramSideLineGrey.png" id="5_xqwgc"]
 [ext_resource type="BitMap" uid="uid://duwply7axl3oa" path="res://assets/sprites/pentagram/pentagramSideLineBitmask.png" id="6_r1oqa"]
 
@@ -38,12 +38,11 @@ render_target_update_mode = 4
 layer = -1
 
 [node name="Background" type="TextureRect" parent="LevelSelectSubviewport/SubViewport/BackgroundLayer"]
-offset_left = -1336.0
-offset_top = -1328.0
-offset_right = 3952.0
-offset_bottom = 2136.0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 1480.0
+offset_bottom = 1088.0
 texture = ExtResource("3_rfw4t")
-stretch_mode = 1
 
 [node name="LevelButtons" type="Control" parent="LevelSelectSubviewport/SubViewport"]
 layout_mode = 3

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3oqn2p873lkj"]
+[gd_scene load_steps=3 format=3 uid="uid://n1v5n42cx1qq"]
 
 [ext_resource type="Script" uid="uid://dj21516gh5s0a" path="res://scripts/level_subviewport.gd" id="1_u5chb"]
 [ext_resource type="Texture2D" uid="uid://bay6ebg8a3auy" path="res://assets/sprites/table.png" id="2_4bhb0"]
@@ -17,9 +17,8 @@ render_target_update_mode = 4
 layer = -1
 
 [node name="Background" type="TextureRect" parent="SubViewport/BackgroundLayer"]
-offset_left = -1336.0
-offset_top = -1328.0
-offset_right = 3952.0
-offset_bottom = 2136.0
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 1504.0
+offset_bottom = 1128.0
 texture = ExtResource("2_4bhb0")
-stretch_mode = 1
