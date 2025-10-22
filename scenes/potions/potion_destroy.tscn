@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1wj4fmn1oyuc"]
+[gd_scene load_steps=6 format=3 uid="uid://d1wj4fmn1oyuc"]
 
 [ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_57lq1"]
 [ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_4y1a7"]
+[ext_resource type="PackedScene" uid="uid://rw4vquuh7ii1" path="res://scenes/tooltip_destruction.tscn" id="2_v80vm"]
 [ext_resource type="Texture2D" uid="uid://3qn5lapr1icr" path="res://assets/sprites/potions/potion_destroy.png" id="3_v80vm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8kk5y"]
@@ -11,6 +12,7 @@ shader_parameter/active = false
 [node name="Potion" type="Node2D"]
 script = ExtResource("1_57lq1")
 id = 1
+tooltip_scene = ExtResource("2_v80vm")
 
 [node name="PotionSprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_8kk5y")
@@ -23,3 +25,5 @@ texture = ExtResource("3_v80vm")
 polygon = PackedVector2Array(-56, -176, -48, -200, -16, -200, -8, -176, 8, -168, 8, -152, 0, -144, 56, -104, 56, 32, 40, 184, -40, 192, -112, 184, -120, 24, -112, -104, -56, -144, -72, -152, -72, -168)
 
 [connection signal="input_event" from="PotionHitbox" to="." method="_on_potion_hitbox_input_event"]
+[connection signal="mouse_entered" from="PotionHitbox" to="." method="_on_potion_hitbox_mouse_entered"]
+[connection signal="mouse_exited" from="PotionHitbox" to="." method="_on_potion_hitbox_mouse_exited"]

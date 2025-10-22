@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpxki1linsv70"]
+[gd_scene load_steps=6 format=3 uid="uid://cpxki1linsv70"]
 
 [ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_pgjh1"]
 [ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_etqeo"]
+[ext_resource type="PackedScene" uid="uid://ybelx4wpyffi" path="res://scenes/tooltip_freeze.tscn" id="2_phnfh"]
 [ext_resource type="Texture2D" uid="uid://sanjxdffxcqi" path="res://assets/sprites/potions/potion_freeze.png" id="3_pgjh1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8kk5y"]
@@ -11,6 +12,7 @@ shader_parameter/active = false
 [node name="Potion" type="Node2D"]
 script = ExtResource("1_pgjh1")
 id = 2
+tooltip_scene = ExtResource("2_phnfh")
 
 [node name="PotionSprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_8kk5y")
@@ -23,3 +25,4 @@ texture = ExtResource("3_pgjh1")
 polygon = PackedVector2Array(-30, -182, 11, -182, 12, -157, 32, -152, 21, -123, 80, -168, 48, 216, -8, 224, -64, 216, -88, -96, -46, -105, -45, -121, -40, -122, -51, -148)
 
 [connection signal="input_event" from="PotionHitbox" to="." method="_on_potion_hitbox_input_event"]
+[connection signal="mouse_entered" from="PotionHitbox" to="." method="_on_potion_hitbox_mouse_entered"]

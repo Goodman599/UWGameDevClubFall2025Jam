@@ -62,6 +62,11 @@ func zoom_out_on_won():
 			$LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).texture_normal = solidSideLineTexture
 		max_completed_level += 1
 		$LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).show()
+		
+	var cauldron_node = get_node("Sidebar/Cauldron")
+	@warning_ignore("integer_division")
+	cauldron_node.set_fetus_stage(floor(max_completed_level / 2) + 1)
+		
 	level_subviewport.disappear()
 	# Subviewport/subviewport.level_X/level_fundamentals/LevelCamera
 	$LevelSubviewport/SubViewport.get_child(1).get_node("LevelFundamentals/LevelCamera").zoom_out()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpsrjmk6ns502"]
+[gd_scene load_steps=6 format=3 uid="uid://dpsrjmk6ns502"]
 
 [ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_ttxux"]
 [ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_btkd0"]
+[ext_resource type="PackedScene" uid="uid://04116qhkk46l" path="res://scenes/tooltip_speed.tscn" id="2_kxst0"]
 [ext_resource type="Texture2D" uid="uid://bn5to5fn6jmqf" path="res://assets/sprites/potions/potion_speed.png" id="3_bocin"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8kk5y"]
@@ -11,6 +12,7 @@ shader_parameter/active = false
 [node name="Potion" type="Node2D"]
 script = ExtResource("1_ttxux")
 id = 4
+tooltip_scene = ExtResource("2_kxst0")
 
 [node name="PotionSprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_8kk5y")

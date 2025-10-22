@@ -14,5 +14,8 @@ func _ready() -> void:
 	anim.play("default")
 
 func set_fetus_stage(newStage : int):
+	if newStage > 5 or newStage < 0:
+		print("cannot set LittleGuy to stage " + str(newStage))
+		return
 	$LittleGuy.texture = textures[newStage - 1]
 	stage = newStage

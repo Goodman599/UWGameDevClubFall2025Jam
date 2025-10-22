@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbso0v7pc2id4"]
+[gd_scene load_steps=6 format=3 uid="uid://dbso0v7pc2id4"]
 
 [ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_ym1ep"]
+[ext_resource type="PackedScene" uid="uid://b3maj1xdaor5d" path="res://scenes/tooltip_mirror.tscn" id="2_npeax"]
 [ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_oag7s"]
 [ext_resource type="Texture2D" uid="uid://bl8j8yjo4ugdx" path="res://assets/sprites/potions/potion_mirror.png" id="3_ym1ep"]
 
@@ -11,6 +12,7 @@ shader_parameter/active = false
 [node name="Potion" type="Node2D"]
 script = ExtResource("1_ym1ep")
 id = 3
+tooltip_scene = ExtResource("2_npeax")
 
 [node name="PotionSprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_8kk5y")

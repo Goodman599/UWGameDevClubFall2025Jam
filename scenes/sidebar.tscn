@@ -1,19 +1,33 @@
-[gd_scene load_steps=8 format=3 uid="uid://cm8hjo3ny8ja"]
+[gd_scene load_steps=10 format=3 uid="uid://cm8hjo3ny8ja"]
 
 [ext_resource type="Texture2D" uid="uid://dng3v03wqbmvv" path="res://assets/sprites/shelf.png" id="1_l54f8"]
+[ext_resource type="Texture2D" uid="uid://b0supetsx881b" path="res://assets/sprites/background.png" id="1_s0ffo"]
 [ext_resource type="PackedScene" uid="uid://d1wj4fmn1oyuc" path="res://scenes/potions/potion_destroy.tscn" id="2_l54f8"]
 [ext_resource type="PackedScene" uid="uid://dfaoesn2evsk" path="res://scenes/cauldron.tscn" id="3_26ftg"]
+[ext_resource type="Texture2D" uid="uid://b6fa7g8x0d2tl" path="res://assets/sprites/divider.png" id="3_lueqk"]
 [ext_resource type="PackedScene" uid="uid://cpxki1linsv70" path="res://scenes/potions/potion_freeze.tscn" id="3_s0ffo"]
 [ext_resource type="PackedScene" uid="uid://dbso0v7pc2id4" path="res://scenes/potions/potion_mirror.tscn" id="4_hdh5q"]
 [ext_resource type="PackedScene" uid="uid://dpsrjmk6ns502" path="res://scenes/potions/potion_speed.tscn" id="5_lueqk"]
 [ext_resource type="PackedScene" uid="uid://b2ckm2d66cqk4" path="res://scenes/journal_entry.tscn" id="7_s0ffo"]
 
 [node name="Sidebar" type="Node2D"]
+z_index = 1
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(223.00003, 421.5)
-scale = Vector2(0.20091744, 0.25968748)
+position = Vector2(241, 539.85156)
+scale = Vector2(0.20091744, 0.24006595)
+texture = ExtResource("1_s0ffo")
+
+[node name="Bookshelf" type="Sprite2D" parent="."]
+position = Vector2(213.5, 391.00003)
+scale = Vector2(0.20688075, 0.24031249)
 texture = ExtResource("1_l54f8")
+region_rect = Rect2(0, 0, 2180, 3063.8984)
+
+[node name="Divider" type="Sprite2D" parent="."]
+position = Vector2(494.00003, 540)
+scale = Vector2(0.15, 0.24)
+texture = ExtResource("3_lueqk")
 
 [node name="Cauldron" parent="." instance=ExtResource("3_26ftg")]
 position = Vector2(31, 587)
@@ -24,20 +38,24 @@ scale = Vector2(0.5209798, 0.5209798)
 
 [node name="PotionDestroy" parent="Potions" instance=ExtResource("2_l54f8")]
 z_index = 1
-position = Vector2(176.59032, -358.93915)
+position = Vector2(180.42923, -280.24115)
+scale = Vector2(0.9, 0.9)
 
 [node name="PotionFreeze" parent="Potions" instance=ExtResource("3_s0ffo")]
 z_index = 1
-position = Vector2(504.81805, -385.81152)
+position = Vector2(429.95917, -309.03333)
+scale = Vector2(0.9, 0.9)
 
 [node name="PotionMirror" parent="Potions" instance=ExtResource("4_hdh5q")]
 z_index = 1
-position = Vector2(130.52332, 78.69791)
+position = Vector2(153.55682, 126.68442)
+scale = Vector2(0.9, 0.85)
 
 [node name="PotionSpeed" parent="Potions" instance=ExtResource("5_lueqk")]
 z_index = 1
-position = Vector2(510.57635, 74.85895)
+position = Vector2(456.83154, 124.76489)
+scale = Vector2(1, 0.8)
 
 [node name="JournalEntry" parent="." instance=ExtResource("7_s0ffo")]
 visible = false
-z_index = 3
+z_index = 4

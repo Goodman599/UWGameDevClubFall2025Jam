@@ -15,8 +15,10 @@ func _input(event: InputEvent) -> void:
 			fade_out()
 			
 func fade_out():
+	print("check")
 	var tween = create_tween()
 	tween.tween_property(self, "modulate:a", 0.0, 1.0)  # fade to alpha=0 over 1 second
+	hide()
 	
 func fade_in():
 	show() 
