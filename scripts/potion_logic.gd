@@ -11,8 +11,8 @@ var max_completed_level : int = 0
 var crafting_costs = {
 	1 : [0, 0, 1, 1],
 	2 : [2, 1, 2, 0],
-	3 : [1, 2, 0, 1],
-	4 : [1, 0, 0, 2],
+	3 : [1, 0, 0, 2],
+	4 : [1, 2, 0, 1],
 }
 
 @export var id = -1
