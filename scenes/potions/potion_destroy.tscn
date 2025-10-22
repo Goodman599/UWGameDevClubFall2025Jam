@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1wj4fmn1oyuc"]
+[gd_scene load_steps=7 format=3 uid="uid://d1wj4fmn1oyuc"]
 
 [ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_57lq1"]
 [ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_4y1a7"]
@@ -29,5 +29,3 @@ polygon = PackedVector2Array(-56, -176, -48, -200, -16, -200, -8, -176, 8, -168,
 stream = ExtResource("4_4y1a7")
 
 [connection signal="input_event" from="PotionHitbox" to="." method="_on_potion_hitbox_input_event"]
-[connection signal="mouse_entered" from="PotionHitbox" to="." method="_on_potion_hitbox_mouse_entered"]
-[connection signal="mouse_exited" from="PotionHitbox" to="." method="_on_potion_hitbox_mouse_exited"]
