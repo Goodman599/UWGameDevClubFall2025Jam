@@ -39,9 +39,9 @@ func _process(_delta):
 			return
 			
 		var spirit_move_dir = move_dir
-		if potion_status == 3:
-			spirit_move_dir = -spirit_move_dir
 		if potion_status == 4:
+			spirit_move_dir = -spirit_move_dir
+		if potion_status == 3:
 			spirit_move_dir *= 2
 		# Call spirit to check if spirit target tile is walkable first
 		# Receives a value of 0, 0 if the check fails

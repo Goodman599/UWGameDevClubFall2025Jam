@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=4 uid="uid://qm5wx3ep2sgn"]
 
 [ext_resource type="PackedScene" uid="uid://vo2ewak6nrrb" path="res://scenes/level_fundamentals.tscn" id="2_6iamk"]
-[ext_resource type="FontFile" uid="uid://b0tgvpwr0y3f3" path="res://assets/fonts/tempus-sans-itc.ttf" id="2_nsrm0"]
+[ext_resource type="FontFile" uid="uid://1jbxneuimmtr" path="res://assets/fonts/tempus-sans-itc.ttf" id="2_nsrm0"]
 
 [node name="Level1" type="Node2D"]
 
@@ -17,7 +17,8 @@ position = Vector2(64, 64)
 position = Vector2(1088, 832)
 
 [node name="LevelCamera" parent="LevelFundamentals" index="4"]
-position = Vector2(576, 448)
+position = Vector2(704, 448)
+zoom = Vector2(0.9, 0.9)
 
 [node name="Label" type="Label" parent="LevelFundamentals"]
 offset_left = 1216.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbso0v7pc2id4"]
+[gd_scene load_steps=7 format=3 uid="uid://dbso0v7pc2id4"]
 
 [ext_resource type="Script" uid="uid://chiiselnie4lq" path="res://scripts/potion_logic.gd" id="1_ym1ep"]
 [ext_resource type="PackedScene" uid="uid://b3maj1xdaor5d" path="res://scenes/tooltip_mirror.tscn" id="2_npeax"]
@@ -12,7 +12,7 @@ shader_parameter/active = false
 
 [node name="Potion" type="Node2D"]
 script = ExtResource("1_ym1ep")
-id = 3
+id = 4
 tooltip_scene = ExtResource("2_npeax")
 
 [node name="PotionSprite" type="Sprite2D" parent="."]

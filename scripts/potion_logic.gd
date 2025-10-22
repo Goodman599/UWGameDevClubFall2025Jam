@@ -6,10 +6,12 @@ var level_node : Node2D
 var level_started = false
 var hovering :bool
 
+var max_completed_level : int = 0
+
 var crafting_costs = {
 	1 : [0, 0, 1, 1],
 	2 : [2, 1, 2, 0],
-	3 : [1, 2, 0, 0],
+	3 : [1, 2, 0, 1],
 	4 : [1, 0, 0, 2],
 }
 
@@ -33,6 +35,10 @@ func _ready() -> void:
 
 func start_level():
 	updateShader()
+	if (max_completed_level + 1) / 2 >= id:
+		show()
+	else:
+		hide()
 	selected = false
 
 func _process(_delta):

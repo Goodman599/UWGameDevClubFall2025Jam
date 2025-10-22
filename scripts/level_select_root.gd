@@ -8,7 +8,7 @@ extends Control
 @onready var solidSideLineTexture = preload("res://assets/sprites/pentagram/pentagramsSideLineWhite.png")
 
 var current_level_number : int = -1
-var max_completed_level = 0
+var max_completed_level = 5
 
 var screen_tween : Tween
 
@@ -45,6 +45,7 @@ func level_chosen(level_number : int):
 	# Gets the "LevelFundamentals" node
 	for potion_node in potion_parent_node.get_children():
 		potion_node.level_node = current_level.get_child(0)
+		potion_node.max_completed_level = max_completed_level
 		potion_node.start_level()
 	
 	# Connect back button
@@ -108,6 +109,7 @@ func zoom_out(new_level_unlocked : bool):
 	
 	for potion_node in potion_parent_node.get_children():
 		potion_node.level_node = null
+		potion_node.max_completed_level = max_completed_level
 		potion_node.start_level()
 	
 	screen_tween = get_tree().root.create_tween()
