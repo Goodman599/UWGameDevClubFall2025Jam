@@ -1,9 +1,9 @@
 extends CanvasLayer
 var overlay_colors = [
-	Color(1, 0, 0, 0.5),  # Red
-	Color(0, 1, 0, 0.5),  # Green
-	Color(0, 0, 1, 0.5),  # Blue
-	Color(1, 1, 0, 0.5),
+	Color(1, 0, 0, 0.5),  
+	Color(0, 0, 1, 0.5),  
+	Color(1, 1, 0, 0.5),  
+	Color(0, 1, 0, 0.5),
 ]
 	
 func _ready():
