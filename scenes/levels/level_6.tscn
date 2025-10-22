@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7b7tdlh1ehi5"]
+[gd_scene load_steps=2 format=4 uid="uid://b7b7tdlh1ehi5"]
 
 [ext_resource type="PackedScene" uid="uid://vo2ewak6nrrb" path="res://scenes/level_fundamentals.tscn" id="1_gfuhv"]
 
@@ -6,4 +6,20 @@
 
 [node name="LevelFundamentals" parent="." instance=ExtResource("1_gfuhv")]
 
+[node name="LevelTileMap" parent="LevelFundamentals" index="0"]
+tile_map_data = PackedByteArray("AAABAAAAAAAFAAQAAAACAAEAAAAFAAUAAAACAAAAAAAGAAQAAAABAAEAAAAFAAUAAAADAAEAAAABAAMAAAACAAIAAAAGAAYAAAAEAAEAAAABAAMAAAAFAAQAAAADAAEAAAAFAAMAAAAEAAUAAAAFAAIAAAADAAEAAAAFAAEAAAAGAAQAAAAFAAUAAAADAAEAAAAFAAYAAAADAAEAAAAFAAcAAAAEAAYAAAABAAIAAAAFAAYAAAAHAAUAAAADAAIAAAAGAAcAAAABAAMAAAAHAAcAAAABAAMAAAAIAAcAAAABAAMAAAAJAAcAAAAGAAYAAAAJAAYAAAADAAEAAAAJAAUAAAADAAEAAAAJAAQAAAADAAEAAAAJAAMAAAADAAEAAAAJAAIAAAADAAEAAAAJAAEAAAADAAEAAAAJAAAAAAAGAAQAAAAIAAAAAAABAAMAAAAHAAAAAAABAAMAAAAGAAAAAAABAAMAAAAFAAAAAAAEAAQAAAAGAAMAAAABAAMAAAAHAAMAAAAGAAQAAAAHAAQAAAADAAEAAAAAAAAAAAAEAAQAAAAAAAEAAAAEAAUAAAAAAAIAAAAEAAYAAAA=")
+
+[node name="Destructables" parent="LevelFundamentals/LevelTileMap" index="0"]
+tile_map_data = PackedByteArray("AAAEAAEAAAAAAAAAAAA=")
+
+[node name="Player" parent="LevelFundamentals" index="1"]
+position = Vector2(192, 192)
+
+[node name="Spirit" parent="LevelFundamentals" index="2"]
+position = Vector2(960, 704)
+
+[node name="LevelCamera" parent="LevelFundamentals" index="4"]
+position = Vector2(546, 448)
+
 [editable path="LevelFundamentals"]
+[editable path="LevelFundamentals/LevelTileMap"]

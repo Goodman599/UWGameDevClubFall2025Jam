@@ -1,9 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://cu3c0lalqi5ct"]
+[gd_scene load_steps=3 format=4 uid="uid://cu3c0lalqi5ct"]
 
 [ext_resource type="PackedScene" uid="uid://vo2ewak6nrrb" path="res://scenes/level_fundamentals.tscn" id="1_j2425"]
+[ext_resource type="Script" uid="uid://cv36viy2i065s" path="res://scripts/tt_label.gd" id="2_g2h2n"]
 
 [node name="Level2" type="Node2D"]
 
 [node name="LevelFundamentals" parent="." instance=ExtResource("1_j2425")]
 
+[node name="LevelTileMap" parent="LevelFundamentals" index="0"]
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAAAAAAIAAYAAAADAAIAAAAAAAEAAAADAAEAAAAAAAIAAAADAAEAAAAAAAMAAAADAAEAAAAAAAQAAAADAAEAAAAAAAUAAAADAAEAAAAAAAYAAAAEAAYAAAABAAYAAAABAAMAAAACAAYAAAAGAAYAAAACAAUAAAADAAEAAAACAAQAAAADAAEAAAACAAMAAAADAAEAAAACAAIAAAADAAEAAAACAAEAAAAEAAQAAAADAAEAAAABAAMAAAAEAAEAAAAGAAQAAAAEAAIAAAADAAEAAAAEAAMAAAADAAEAAAAEAAQAAAADAAEAAAAEAAUAAAAEAAYAAAAFAAUAAAABAAMAAAAGAAUAAAAGAAYAAAAGAAQAAAADAAEAAAAGAAMAAAADAAEAAAAGAAIAAAADAAEAAAAGAAEAAAADAAEAAAAHAAAAAAABAAMAAAAGAAAAAAAEAAQAAAAIAAAAAAAGAAQAAAAIAAIAAAADAAEAAAAIAAEAAAADAAEAAAAIAAMAAAADAAEAAAAIAAQAAAADAAEAAAAIAAUAAAADAAEAAAA=")
+
+[node name="Destructables" parent="LevelFundamentals/LevelTileMap" index="0"]
+tile_map_data = PackedByteArray("AAAIAAQAAAAAAAAAAAAGAAMAAAAAAAAAAAA=")
+
+[node name="Player" parent="LevelFundamentals" index="1"]
+position = Vector2(64, 64)
+
+[node name="Spirit" parent="LevelFundamentals" index="2"]
+position = Vector2(1088, 832)
+
+[node name="LevelCamera" parent="LevelFundamentals" index="4"]
+position = Vector2(576, 448)
+
+[node name="Label" type="Label" parent="LevelFundamentals"]
+offset_left = 31.0
+offset_top = 881.0
+offset_right = 539.0
+offset_bottom = 974.0
+theme_override_font_sizes/font_size = 32
+text = "Now it's time to use potions
+Try to drag potions into cauldron"
+script = ExtResource("2_g2h2n")
+
+[node name="Label2" type="Label" parent="LevelFundamentals"]
+offset_left = 1150.0
+offset_top = 248.0
+offset_right = 1448.0
+offset_bottom = 389.0
+theme_override_font_sizes/font_size = 32
+text = "Destruction potion 
+is able to destory
+ the rocks"
+script = ExtResource("2_g2h2n")
+
 [editable path="LevelFundamentals"]
+[editable path="LevelFundamentals/LevelTileMap"]
