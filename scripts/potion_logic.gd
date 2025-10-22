@@ -25,8 +25,8 @@ var tooltip_instance: Node2D = null
 
 
 func _ready() -> void:
-	self.connect("mouse_entered", Callable(self, "_on_mouse_entered"))
-	self.connect("mouse_exited", Callable(self, "_on_mouse_exited"))
+	#mouse_entered.connect(Callable(self, "_on_mouse_entered"))
+	#mouse_exited.connect(Callable(self, "_on_mouse_exited"))
 	hovering = false
 	area.mouse_entered.connect(showToolTip)
 	area.mouse_exited.connect(hideToolTip)

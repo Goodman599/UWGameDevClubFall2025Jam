@@ -12,9 +12,9 @@ script = ExtResource("1_ev123")
 [node name="Labels" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 24.0
+offset_left = 88.0
 offset_top = 24.0
-offset_right = 740.0
+offset_right = 804.0
 offset_bottom = 664.0
 
 [node name="count_0" type="Label" parent="Labels"]
@@ -58,7 +58,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Sprites" type="Node2D" parent="."]
-position = Vector2(24, 24)
+position = Vector2(88, 24)
 
 [node name="resource_icon_1" type="Sprite2D" parent="Sprites"]
 position = Vector2(32, 32)

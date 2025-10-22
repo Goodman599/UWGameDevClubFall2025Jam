@@ -76,17 +76,14 @@ func zoom_out_on_won():
 		else:
 			$LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).texture_normal = solidSideLineTexture
 		max_completed_level += 1
+		if max_completed_level == 10:
+			print("WINNN")
+		level_subviewport.disappeared.connect($LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).appear, CONNECT_ONE_SHOT)
 		
 	var cauldron_node = get_node("Sidebar/Cauldron")
 	@warning_ignore("integer_division")
 	cauldron_node.set_fetus_stage(floor(max_completed_level / 2) + 1)
-		
-		if max_completed_level == 10:
-			print("WINNN")
-		
-		
-		level_subviewport.disappeared.connect($LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).appear, CONNECT_ONE_SHOT)
-		
+
 	in_transition = true
 	
 	level_subviewport.disappear()
