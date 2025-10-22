@@ -15,8 +15,6 @@ var screen_tween : Tween
 var in_transition := false
 
 func _ready():
-	level_subviewport.disappeared.connect($LevelAppearSound.play)
-	
 	for i in range(level_buttons.get_child_count()):
 		var button = level_buttons.get_children()[i]
 		if button is TextureButton:
@@ -48,7 +46,9 @@ func level_chosen(level_number : int):
 	for potion_node in potion_parent_node.get_children():
 		potion_node.level_node = current_level.get_child(0)
 		potion_node.start_level()
-
+	
+	# Connect back button
+	current_level.get_child(0).get_node("BackButton/Back").pressed.connect(zoom_out.bind(false))
 
 func zoom_in(target_position : Vector2):
 	level_subviewport.appear()
@@ -65,7 +65,7 @@ func zoom_in(target_position : Vector2):
 	in_transition = false
 
 func zoom_out_on_won():
-	$LevelComplete.play()
+	
 	
 	var new_level_unlocked := false # Keep track of this for animation waiting
 	if current_level_number > max_completed_level:
@@ -77,13 +77,26 @@ func zoom_out_on_won():
 			$LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).texture_normal = solidSideLineTexture
 		max_completed_level += 1
 		if max_completed_level == 10:
-			print("WINNN")
+			$"../WinScreen".show()
+			zoom_out(false)
+			return
+		level_subviewport.disappeared.connect($LevelAppearSound.play, CONNECT_ONE_SHOT)
 		level_subviewport.disappeared.connect($LevelSelectSubviewport/SubViewport/LevelButtons.get_child(max_completed_level * 2).appear, CONNECT_ONE_SHOT)
 		
-	var cauldron_node = get_node("Sidebar/Cauldron")
-	@warning_ignore("integer_division")
-	cauldron_node.set_fetus_stage(floor(max_completed_level / 2) + 1)
+		var cauldron_node = get_node("Sidebar/Cauldron")
+		@warning_ignore("integer_division")
+		if cauldron_node.stage != floor(max_completed_level / 2) + 1:
+			@warning_ignore("integer_division")
+			cauldron_node.set_fetus_stage(floor(max_completed_level / 2) + 1)
+	
+	$LevelComplete.play()
+	
+	zoom_out(new_level_unlocked)
 
+func zoom_out(new_level_unlocked : bool):
+	if screen_tween.is_running():
+		return
+	
 	in_transition = true
 	
 	level_subviewport.disappear()

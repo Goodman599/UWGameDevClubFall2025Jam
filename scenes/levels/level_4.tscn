@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=4 uid="uid://b8wfwbj0yg810"]
+[gd_scene load_steps=2 format=4 uid="uid://b8wfwbj0yg810"]
 
 [ext_resource type="PackedScene" uid="uid://vo2ewak6nrrb" path="res://scenes/level_fundamentals.tscn" id="1_gfuhv"]
-[ext_resource type="Script" uid="uid://cv36viy2i065s" path="res://scripts/tt_label.gd" id="2_vmkp1"]
 
 [node name="Level4" type="Node2D"]
 
 [node name="LevelFundamentals" parent="." instance=ExtResource("1_gfuhv")]
+resources = Array[int]([8, 4, 8, 1])
 
 [node name="LevelTileMap" parent="LevelFundamentals" index="0"]
 tile_map_data = PackedByteArray("AAAAAAUAAAABAAMAAAABAAUAAAABAAMAAAACAAUAAAABAAMAAAADAAUAAAABAAMAAAAEAAUAAAABAAMAAAAFAAUAAAABAAMAAAAGAAUAAAAGAAYAAAAGAAMAAAAGAAQAAAAFAAMAAAABAAMAAAAEAAMAAAABAAMAAAADAAMAAAABAAMAAAACAAMAAAABAAMAAAACAAAAAAABAAMAAAADAAAAAAABAAMAAAAEAAAAAAABAAMAAAAFAAAAAAABAAMAAAAGAAAAAAABAAMAAAAHAAAAAAABAAMAAAAIAAAAAAAGAAQAAAD//wAAAAADAAAAAAD//wEAAAADAAEAAAD//wIAAAADAAEAAAD//wMAAAADAAEAAAD//wQAAAADAAEAAAD//wUAAAAEAAYAAAABAAAAAAAEAAQAAAABAAEAAAADAAEAAAABAAIAAAADAAEAAAABAAMAAAAEAAYAAAAGAAQAAAADAAEAAAAIAAEAAAADAAEAAAAIAAIAAAADAAEAAAAIAAMAAAADAAEAAAAIAAQAAAADAAEAAAAIAAUAAAADAAEAAAAIAAYAAAADAAEAAAAIAAcAAAADAAIAAAA=")
@@ -21,24 +21,6 @@ position = Vector2(-64, 64)
 
 [node name="LevelCamera" parent="LevelFundamentals" index="4"]
 position = Vector2(576, 448)
-
-[node name="Label" type="Label" parent="LevelFundamentals"]
-offset_left = 37.0
-offset_top = 799.0
-offset_right = 386.0
-offset_bottom = 844.0
-theme_override_font_sizes/font_size = 32
-text = "Now, try other potions"
-script = ExtResource("2_vmkp1")
-
-[node name="Label2" type="Label" parent="LevelFundamentals"]
-offset_left = 248.0
-offset_top = 172.0
-offset_right = 1049.0
-offset_bottom = 217.0
-theme_override_font_sizes/font_size = 32
-text = "Freeze potion can stop the move of spirit for a while"
-script = ExtResource("2_vmkp1")
 
 [editable path="LevelFundamentals"]
 [editable path="LevelFundamentals/LevelTileMap"]

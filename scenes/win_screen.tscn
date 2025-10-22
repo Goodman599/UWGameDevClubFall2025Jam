@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3w7u8jc20a5p"]
+
+[ext_resource type="Script" uid="uid://dk8x72j6hvnyb" path="res://scripts/win_screen.gd" id="1_2l6cc"]
+[ext_resource type="Texture2D" uid="uid://7y8jfc6jyvfx" path="res://assets/sprites/win.png" id="1_wv5lq"]
+[ext_resource type="FontFile" uid="uid://b0tgvpwr0y3f3" path="res://assets/fonts/tempus-sans-itc.ttf" id="3_e41g7"]
+
+[node name="WinScreen" type="Node2D"]
+script = ExtResource("1_2l6cc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(959.99994, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_wv5lq")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 776.0
+offset_right = 1920.0
+offset_bottom = 843.0
+theme_override_fonts/font = ExtResource("3_e41g7")
+theme_override_font_sizes/font_size = 50
+text = "Click any key to continue"
+horizontal_alignment = 1

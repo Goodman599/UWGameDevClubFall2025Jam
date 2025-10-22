@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bedatp2u2jbrl"]
+[gd_scene load_steps=7 format=3 uid="uid://bedatp2u2jbrl"]
 
 [ext_resource type="Script" uid="uid://cuinnqf08com7" path="res://scripts/resource_count.gd" id="1_ev123"]
 [ext_resource type="Texture2D" uid="uid://ba8glyepf66u3" path="res://assets/sprites/resources/resource_1.png" id="2_84uf0"]
+[ext_resource type="FontFile" uid="uid://b0tgvpwr0y3f3" path="res://assets/fonts/tempus-sans-itc.ttf" id="2_sdvgy"]
 [ext_resource type="Texture2D" uid="uid://dly8wo2l82qyu" path="res://assets/sprites/resources/resource_2.png" id="3_sdvgy"]
 [ext_resource type="Texture2D" uid="uid://c21qk5qorr78l" path="res://assets/sprites/resources/resource_3.png" id="4_lvtci"]
 [ext_resource type="Texture2D" uid="uid://q5saxg2dm8yd" path="res://assets/sprites/resources/resource_4.png" id="5_3ki1r"]
@@ -22,7 +23,8 @@ layout_mode = 0
 offset_left = 64.0
 offset_right = 128.0
 offset_bottom = 64.0
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_sdvgy")
+theme_override_font_sizes/font_size = 40
 text = "-1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -32,27 +34,30 @@ layout_mode = 0
 offset_left = 192.0
 offset_right = 256.0
 offset_bottom = 64.0
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_sdvgy")
+theme_override_font_sizes/font_size = 40
 text = "-1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="count_2" type="Label" parent="Labels"]
 layout_mode = 0
-offset_left = 320.0
-offset_right = 384.0
+offset_left = 348.0
+offset_right = 412.0
 offset_bottom = 64.0
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_sdvgy")
+theme_override_font_sizes/font_size = 40
 text = "-1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="count_3" type="Label" parent="Labels"]
 layout_mode = 0
-offset_left = 448.0
-offset_right = 512.0
+offset_left = 476.0
+offset_right = 540.0
 offset_bottom = 64.0
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_sdvgy")
+theme_override_font_sizes/font_size = 40
 text = "-1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -71,11 +76,11 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_sdvgy")
 
 [node name="resource_icon_3" type="Sprite2D" parent="Sprites"]
-position = Vector2(288, 33)
+position = Vector2(308, 33)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_lvtci")
 
 [node name="resource_icon_4" type="Sprite2D" parent="Sprites"]
-position = Vector2(415, 32)
+position = Vector2(443, 32)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_3ki1r")
