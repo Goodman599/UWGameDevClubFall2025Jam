@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://1jbxneuimmtr"
-path="res://.godot/imported/tempus-sans-itc.ttf-c28a469bfa3b15560286a05319e808b1.fontdata"
+uid="uid://b0tgvpwr0y3f3"
+path="res://.godot/imported/tempus-sans-itc.ttf-8b7991b7e2910299e017c6d455b8ac3c.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/tempus-sans-itc.ttf"
-dest_files=["res://.godot/imported/tempus-sans-itc.ttf-c28a469bfa3b15560286a05319e808b1.fontdata"]
+source_file="res://assets/tempus-sans-itc.ttf"
+dest_files=["res://.godot/imported/tempus-sans-itc.ttf-8b7991b7e2910299e017c6d455b8ac3c.fontdata"]
 
 [params]
 

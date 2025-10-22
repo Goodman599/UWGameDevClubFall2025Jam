@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dvop8v18x3ts8"]
+
+[ext_resource type="FontFile" uid="uid://1jbxneuimmtr" path="res://assets/fonts/tempus-sans-itc.ttf" id="1_4h4ne"]
+
+[resource]
+font = ExtResource("1_4h4ne")
+font_color = Color(0, 0, 0, 1)
