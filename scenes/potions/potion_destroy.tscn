@@ -4,6 +4,7 @@
 [ext_resource type="Shader" uid="uid://c3hu50o821452" path="res://scripts/grayscale.gdshader" id="2_4y1a7"]
 [ext_resource type="PackedScene" uid="uid://rw4vquuh7ii1" path="res://scenes/tooltip_destruction.tscn" id="2_v80vm"]
 [ext_resource type="Texture2D" uid="uid://3qn5lapr1icr" path="res://assets/sprites/potions/potion_destroy.png" id="3_v80vm"]
+[ext_resource type="AudioStream" uid="uid://y42uvunwrksj" path="res://assets/sounds/potion_used.mp3" id="4_4y1a7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8kk5y"]
 shader = ExtResource("2_4y1a7")
@@ -23,6 +24,9 @@ texture = ExtResource("3_v80vm")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PotionHitbox"]
 polygon = PackedVector2Array(-56, -176, -48, -200, -16, -200, -8, -176, 8, -168, 8, -152, 0, -144, 56, -104, 56, 32, 40, 184, -40, 192, -112, 184, -120, 24, -112, -104, -56, -144, -72, -152, -72, -168)
+
+[node name="use_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4y1a7")
 
 [connection signal="input_event" from="PotionHitbox" to="." method="_on_potion_hitbox_input_event"]
 [connection signal="mouse_entered" from="PotionHitbox" to="." method="_on_potion_hitbox_mouse_entered"]

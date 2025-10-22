@@ -97,9 +97,10 @@ func craft():
 	player_node.potion_status = id
 	player_node.potion_duration = 2
 	updateShader()
+	$use_sound.play()
 		
 func updateShader():
-	if canCraft() or level_node == null:
+	if level_node == null or canCraft():
 		$PotionSprite.material.set_shader_parameter("active", false)
 	else:
 		$PotionSprite.material.set_shader_parameter("active", true)

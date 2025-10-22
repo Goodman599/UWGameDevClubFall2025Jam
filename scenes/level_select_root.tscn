@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bcjww0gb1tad4"]
+[gd_scene load_steps=13 format=3 uid="uid://bcjww0gb1tad4"]
 
 [ext_resource type="Script" uid="uid://capik4auadpdr" path="res://scripts/level_select_root.gd" id="1_0x71t"]
 [ext_resource type="PackedScene" uid="uid://cm8hjo3ny8ja" path="res://scenes/sidebar.tscn" id="1_egqi8"]
@@ -9,6 +9,9 @@
 [ext_resource type="Script" path="res://scripts/level_button.gd" id="5_r1oqa"]
 [ext_resource type="Texture2D" uid="uid://b2dqoohvtdu3e" path="res://assets/sprites/pentagram/pentagramSideLineGrey.png" id="5_xqwgc"]
 [ext_resource type="BitMap" uid="uid://duwply7axl3oa" path="res://assets/sprites/pentagram/pentagramSideLineBitmask.png" id="6_r1oqa"]
+[ext_resource type="AudioStream" uid="uid://nco7rn407x56" path="res://assets/sounds/level_selected.mp3" id="10_300xu"]
+[ext_resource type="AudioStream" uid="uid://cngedslv7ord" path="res://assets/sounds/level_appear.mp3" id="11_5vxh7"]
+[ext_resource type="AudioStream" uid="uid://ogfo8opuvkbd" path="res://assets/sounds/level_complete.mp3" id="12_tqsga"]
 
 [node name="LevelSelectRoot" type="Control" node_paths=PackedStringArray("level_subviewport")]
 layout_mode = 3
@@ -208,3 +211,12 @@ visible = false
 layout_mode = 0
 offset_left = 448.0
 offset_right = 1920.0
+
+[node name="LevelSelectedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_300xu")
+
+[node name="LevelAppearSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_5vxh7")
+
+[node name="LevelComplete" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_tqsga")
