@@ -1,6 +1,5 @@
 extends Control
 
-@onready var start_button : Button = $MainMenuRoot.start_buttuon
 @onready var UI_camera : Camera2D = $UICamera
 
 const SCREEN_POSITIONS = {
@@ -13,7 +12,7 @@ const SCREEN_SIZE = Vector2(1920, 1080)
 var screen_tween : Tween
 
 func _ready() -> void:
-	start_button.pressed.connect(go_to_screen.bind(SCREEN_POSITIONS["level_select"]))
+	$MainMenuRoot.pressed.connect(go_to_screen.bind(SCREEN_POSITIONS["level_select"]))
 	
 	
 	

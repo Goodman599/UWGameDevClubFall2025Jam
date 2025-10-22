@@ -20,13 +20,26 @@ position = Vector2(1088, 832)
 position = Vector2(576, 448)
 
 [node name="Label" type="Label" parent="LevelFundamentals"]
-offset_left = 360.0
-offset_top = 912.0
-offset_right = 400.0
-offset_bottom = 935.0
+offset_left = 1216.0
+offset_top = 608.0
+offset_right = 1464.0
+offset_bottom = 704.0
 theme_override_fonts/font = ExtResource("2_nsrm0")
 theme_override_font_sizes/font_size = 30
-text = "Use WASD or the arrow keys to move"
+text = "Use WASD or the
+arrow keys to move"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="LevelFundamentals"]
+offset_left = 1168.0
+offset_top = 136.0
+offset_right = 1493.0
+offset_bottom = 232.0
+theme_override_fonts/font = ExtResource("2_nsrm0")
+theme_override_font_sizes/font_size = 30
+text = "Your companion yearns
+to meet with it's shepherd"
+horizontal_alignment = 1
 
 [editable path="LevelFundamentals"]
 [editable path="LevelFundamentals/LevelTileMap"]
